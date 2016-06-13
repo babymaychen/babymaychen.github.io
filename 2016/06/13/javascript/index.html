@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="JavaScript">
+<meta name="description" content="JavaScript是前端工程师必备的技能之一，也是基础中的基础，但是我本人又是个不太重视基础的人，这就导致我在写代码的时候，总会忘记这该怎么写，或者在面试的时候，被问及原理或者基础的语法的时候，总是语塞，而且近几年JavaScript的发展很快，有统治全世界的架势，这也就是为什么我要写这篇文章的原因，让我们一步一步来，坚实的地基才会盖得起高楼大厦。
+
+JavaScript 介绍JavaScri">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript">
+<meta property="og:title" content="Javascript 基础">
 <meta property="og:url" content="http://babymaychen.github.io/2016/06/13/javascript/index.html">
 <meta property="og:site_name" content="孙小妹的博客">
-<meta property="og:description" content="JavaScript">
-<meta property="og:updated_time" content="2016-06-13T06:04:53.819Z">
+<meta property="og:description" content="JavaScript是前端工程师必备的技能之一，也是基础中的基础，但是我本人又是个不太重视基础的人，这就导致我在写代码的时候，总会忘记这该怎么写，或者在面试的时候，被问及原理或者基础的语法的时候，总是语塞，而且近几年JavaScript的发展很快，有统治全世界的架势，这也就是为什么我要写这篇文章的原因，让我们一步一步来，坚实的地基才会盖得起高楼大厦。
+
+JavaScript 介绍JavaScri">
+<meta property="og:updated_time" content="2016-06-13T09:11:38.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript">
-<meta name="twitter:description" content="JavaScript">
+<meta name="twitter:title" content="Javascript 基础">
+<meta name="twitter:description" content="JavaScript是前端工程师必备的技能之一，也是基础中的基础，但是我本人又是个不太重视基础的人，这就导致我在写代码的时候，总会忘记这该怎么写，或者在面试的时候，被问及原理或者基础的语法的时候，总是语塞，而且近几年JavaScript的发展很快，有统治全世界的架势，这也就是为什么我要写这篇文章的原因，让我们一步一步来，坚实的地基才会盖得起高楼大厦。
+
+JavaScript 介绍JavaScri">
 
 
 
@@ -116,7 +122,7 @@
 
   <link rel="canonical" href="http://babymaychen.github.io/2016/06/13/javascript/"/>
 
-  <title> javascript | 孙小妹的博客 </title>
+  <title> Javascript 基础 | 孙小妹的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -210,9 +216,32 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
   
 </nav>
 
@@ -246,7 +275,7 @@
             
             
               
-                javascript
+                Javascript 基础
               
             
           </h1>
@@ -272,8 +301,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/技术文档/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文档</span>
                   </a>
                 </span>
 
@@ -299,16 +328,12 @@
 
           
           
-             <span id="/2016/06/13/javascript/" class="leancloud_visitors" data-flag-title="javascript">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
 
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
           
         </div>
       </header>
@@ -324,6 +349,124 @@
         <blockquote>
 <p><strong>JavaScript</strong>是前端工程师必备的技能之一，也是基础中的基础，但是我本人又是个不太重视基础的人，这就导致我在写代码的时候，总会忘记这该怎么写，或者在面试的时候，被问及原理或者基础的语法的时候，总是语塞，而且近几年JavaScript的发展很快，有统治全世界的架势，这也就是为什么我要写这篇文章的原因，让我们一步一步来，坚实的地基才会盖得起高楼大厦。</p>
 </blockquote>
+<h3 id="JavaScript-介绍"><a href="#JavaScript-介绍" class="headerlink" title="JavaScript 介绍"></a>JavaScript 介绍</h3><p>JavaScript是一种可以用来给网页增加交互性的编程语言，现在也被用于网络服务器（非浏览器环境），如Node.js。<br>JavaScript分为三部分，<strong>ECMAScript</strong>（JavaScript核心语音）、<strong>DOM</strong>（文档对象模型）和<strong>BOM</strong>（浏览器对象模型）。ECMAScript，描述了该语言的语法和基本对象。DOM，描述处理网页内容的方法和接口。BOM，提供了独立于内容而在浏览器窗口之间进行交互的对象和方法。</p>
+<p>ECMAScript是由ECMA TC39委员会进行标准化的一门编程语言，规定了 JavaScript 脚本的核心语法，如 数据类型、关键字、保留字、运算符、对象和语句等，它不属于任何浏览器，现在最新版本是<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6.0</a>。</p>
+<p>DOM是“ Document Object Model ”的缩写，简称“文本对象模型”，定义了 JavaScript 操作 HTML 文档的接口，提供了访问 HTML 文档（如body、form、div、textarea等）的途径以及操作方法，通过调用DOM树上对象的方法可以操纵这些对象。</p>
+<p>BOM 是“ Browser Object Model ”的缩写，简称“ 浏览器对象模型 ”，定义了 JavaScript 操作浏览器的接口，提供了访问某些功能（如浏览器窗口大小、版本信息、浏览历史记录等）的途径以及操作方法。</p>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><ul>
+<li>变量名必须以字母、$、_开头</li>
+<li>定义了的变量没有赋值，会有个默认值undefined</li>
+<li>变量可以存储两种类型的值，原始值和引用值</li>
+<li>原始值：Undefined、Null，Boolean、Number、String</li>
+<li>特殊值：NaN，会发生在类型转换失败时</li>
+<li>字符串转换：toString()方法，Number转换时加的参数可以是2、8、10（默认）、16，分别转换成二进制、八进制、十进制、十六进制字符串，数组转换时，会变成用“ , ”连接的字符串，<code>String()</code>与<code>toString()</code>的唯一区别是对 null 和 undefined 值强制类型转换可以生成字符串而不引发错误</li>
+<li>数字转换： parseInt()、parseFloat()，转换的是部分数值如：<code>parseFloat(&quot;123end&quot;)</code>结果为123，而<code>Number(&quot;123end&quot;)</code>结果为NaN</li>
+<li>Boolean转换：Boolean()，除了空串、null、数字 0、undefined 或 null，它将返回 false，其他都是true</li>
+<li>Object对象，所有对象都由这个对象继承，Object对象里的所有属性和方法都会出现在其他的对象中，因此学习Object对象很重要。</li>
+</ul>
+<h3 id="Object对象"><a href="#Object对象" class="headerlink" title="Object对象"></a>Object对象</h3><p>Object对象，所有对象都由这个对象继承，Object对象里的所有属性和方法都会出现在其他的对象中，因此学习Object对象很重要。<br>Object对象常见的属性：</p>
+<ol>
+<li>constructor，指向原始的Object()函数，如<code>var test = new Array(); test.constructor == Array</code> 返回true；</li>
+<li>Prototype，它默认返回 Object 对象的一个实例，使您有能力向对象添加属性和方法，如<code>Array.prototype.dd = &quot;33&quot;; var test = new Array(); console.log(test.dd);</code> 结果就是”33”,注意先后顺序；</li>
+<li>hasOwnProperty，判断对象是否有某个特定的属性，必须用字符串指定该属性，而且是自身属性，如上记2的例子中，<code>test.hasOwnProperty(&quot;dd&quot;);</code> 返回的是false；</li>
+<li>isPrototypeOf，判断该对象是否为另一个对象的原型，如 <code>var test = new Array(); Array.prototype.isPrototypeOf(test)</code> 返回true；</li>
+</ol>
+<h3 id="Array-对象"><a href="#Array-对象" class="headerlink" title="Array 对象"></a>Array 对象</h3><p>Array 对象用于在单个的变量中存储多个值，也是常用的对象，所以在这里单列出来。</p>
+<ul>
+<li><p>创建数组的方法：</p>
+<ol>
+<li><code>var arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];</code> （推荐）</li>
+<li><code>var arr = new Array(3); arr[0] = &quot;a&quot;; arr[1] = &quot;b&quot;; arr[2] = &quot;c&quot;</code></li>
+<li><code>var arr = new Array(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);</code></li>
+</ol>
+</li>
+<li><p>Array 对象常用方法：</p>
+<ol>
+<li><strong>concat()</strong>，连接两个或更多的数组，并返回结果。如 <code>var arr1 = [1, 2, 3]; var arr2 = [4, 5]; arr1.concat(arr2);</code> 结果输出是[1,2,3,4,5], 需要注意的是arr1和arr2是不变的；</li>
+<li><strong>join()</strong>, 把数组的所有元素放入一个字符串, 元素通过指定的分隔符进行分隔。如 <code>var arr = [1, 2, 3]; arr.join(&quot;.&quot;);</code>返回结果是”1.2.3”；</li>
+<li><strong>pop()</strong>, 删除并返回数组的最后一个元素。如 <code>var arr = [1, 2, 3]; arr.pop();</code>返回删除的最后一个元素 3， 注意的是，此时的arr已经没有了最后一个元素，<code>console.log(arr);</code>结果是[1, 2]；</li>
+<li><strong>push()</strong>, 可向数组的末尾添加一个或多个元素，并返回新的长度。如 <code>var arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]; arr.push(&quot;d&quot;);</code>结果是4, 注意此时的arr已经多了一个元素，<code>console.log(arr);</code>结果是[“a”, “b”, “c”，”d”]；</li>
+<li><strong>reverse()</strong>,颠倒数组中元素的顺序。如 <code>var arr = [1, 2, 3]; arr.reverse();</code> 返回的结果是[3, 2, 1], 注意此时的arr已经改变了，<code>console.log(arr);</code>结果是[3, 2, 1]；</li>
+<li><strong>shift()</strong>,删除第一个元素，并返回刚才删除的第一个元素的值。如 <code>var arr = [1, 2, 3]; arr.shift();</code> 返回的结果是1, 注意此时的arr已经改变了，<code>console.log(arr);</code>结果是[2, 3]；</li>
+<li><strong>slice()</strong>, 从已有的数组中返回选定的元素。有两个参数，start和end，开始和结束的位置，当只有一个参数时，默认end是最后，如 <code>var arr = [1, 2, 3]; arr.slice(1);</code> 返回的是[2, 3], 负值时，从尾部开始计算，如 <code>var arr = [1, 2, 3]; arr.slice(-1);</code> 返回的结果是[3], 注意该方法返回的是字数组，不会改变原来的数组；</li>
+<li><strong>splice()</strong>, 从数组中添加/删除项目，然后返回被删除的项目, 该方法有三个参数，index：必须，整数，添加或删除项目的位置，howmany：必须，要删除的项目数量，设置为0时，不会删除，item1,…,item2：可选，向数组添加的新项目，如 <code>var arr =[1, 2, 3]; arr.splice(0, 1);</code> 返回结果是[1],删除了第一个项目，注意此时的arr已经改变了，<code>console.log(arr);</code>结果是[2, 3]，<code>var arr =[1, 2, 3]; arr.splice(2, 0, 4, 5);</code>返回的结果是[], <code>console.log(arr);</code>结果是[1, 2, 4, 5, 3]，此时应该注意的是splice和slice的区别；</li>
+</ol>
+</li>
+</ul>
+<h3 id="String-对象"><a href="#String-对象" class="headerlink" title="String 对象"></a>String 对象</h3><p>String对象也就是存数字符串的，下面的方法是最常用的也是最容易混淆的。</p>
+<ul>
+<li><p>String 对象常用方法：</p>
+<ol>
+<li><strong>charAt()</strong>，返回指定位置的字符。该方法有一个位置参数，如<code>var str = &quot;Hello May&quot;; str.charAt(6);</code>结果是”M”，如果参数不在0和string.length之间，将返回空串；</li>
+<li><strong>indexOf()</strong>， 返回指定的字符串在在字符串中首次出现的位置。该方法有俩参数，searchvalue：必须，要检索的字符串，fromindex：可选，开始检索的位置，如果参数不在0和string.length之间，将从头开始检索。如 <code>var str = &quot;Hello May&quot;; str.indexOf(&quot;M&quot;);</code>结果是6，<code>var str = &quot;Hello May&quot;; str.indexOf(&quot;M&quot;, 7);</code>结果是-1，找不到该字符串时，返回结果为-1；</li>
+<li><strong>lastIndexOf()</strong>，与indexOf()方法相反，返回最后一个出现的位置；</li>
+<li><strong>match()</strong>，在字符串内检索指定的值，或找到一个或多个正则表达式的匹配。参数，必须，可以是要检索的字符串，也可以是要匹配的正则表达式。如 <code>var str = &quot;Hello May&quot;; str.match(&quot;May&quot;);</code> 返回的结果是[“May”], <code>var str = &quot;Hello May&quot;; str.match(/\d+/g);</code>结果就是null；</li>
+<li><strong>replace()</strong>, 在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。如 <code>var str = &quot;Hello World&quot;; str.replace(&quot;World&quot;, &quot;May&quot;);</code> 结果返回”Hello May”，注意的是，此时arr没有被改变，<code>console.log(str);</code>结果是”Hello World”；</li>
+<li><strong>split()</strong>，把一个字符串分割成字符串数组。该方法有两个参数，separator：必须，要分割的字符串或正则表达式，howmany：可选，指定返回数组的最大长度。如    <code>var str = &quot;How are you?&quot;; str.split(&quot; &quot;, 2);</code> 返回结果是[“How”, “are”]；</li>
+<li><strong>substr()</strong>，在字符串中抽取从指定下标开始的指定数目的字符（包括开始下标位置的字符）。该方法有俩参数，start：必须，要抽取的子串下标，可以是负数，-1是最后一个字符，length：可选，子串中的字符数，必须是正整数。如 <code>var str = &quot;Hello World&quot;; str.substr(5);</code>返回的结果是” World”,<code>var str = &quot;Hello World&quot;; str.substr(5, 4);</code>返回结果是” Wor”，找不到的情况下返回空串。</li>
+<li><strong>substring()</strong>，提取字符串中介于两个指定下标之间的字符。与substr()不同，两个参数分别为开始和结束的下标，并且不接受负值。</li>
+</ol>
+</li>
+</ul>
+<h3 id="RegExp-对象"><a href="#RegExp-对象" class="headerlink" title="RegExp 对象"></a>RegExp 对象</h3><p>正则表达式是被用来匹配字符串中的字符组合的模式，被用于RegExp 的exec和test方法以及 String 的 match、replace、search 和 split 方法，用到的地方很多，也不好理解，所以要慢慢消化了。</p>
+<ul>
+<li><p>创建正则表达式：</p>
+<ol>
+<li><code>var re = /ab+c/;</code></li>
+<li><code>var re = new RegExp(&quot;ab+c&quot;);</code></li>
+</ol>
+</li>
+<li><p>匹配方法：</p>
+<ol>
+<li>使用简单的模式，如/abc/，只会匹配有字符串”abc”顺序出现的字符串。</li>
+<li><p>使用特殊字符</p>
+<ul>
+<li><p>修饰符</p>
+<ol>
+<li>i: 不区分大小写匹配</li>
+<li>g: 全局匹配</li>
+<li>m: 多行匹配</li>
+</ol>
+</li>
+<li><p>方括号(用于匹配某个范围内的字符)</p>
+<ol>
+<li>[abc]: 匹配方括号之间的任何字符</li>
+<li>[^abc]: 匹配不在方括号之间的任何字符</li>
+<li>(red|blue|grenn): 匹配任何指定的选项</li>
+</ol>
+</li>
+<li><p>元字符</p>
+<ol>
+<li>.: 匹配除了换行和结束符以外的其他单个字符</li>
+<li>\w: 匹配单词字符(字母、数字、下划线)</li>
+<li>\W: 匹配非单词字符</li>
+<li>\d: 匹配数字</li>
+<li>\D: 匹配非数字</li>
+<li>\s: 匹配空白字符</li>
+<li>\S: 匹配非空白字符</li>
+<li>\b: 匹配单词边界</li>
+<li>\B: 匹配非单词边界</li>
+</ol>
+</li>
+<li><p>量词</p>
+<ol>
+<li>n+: 匹配包含一个或多个字符n的字符串</li>
+<li>n*: 匹配包含0个或多个字符n的字符串</li>
+<li>n?: 匹配包含0个或一个字符n的字符串</li>
+<li>n{X}: 匹配含有X个n的字符串</li>
+<li>n{X,Y}: 匹配含有X到Y个n的字符串</li>
+<li>n{X,}: 匹配至少X个n的字符串</li>
+<li>n$: 匹配以n结尾的字符串</li>
+<li>^n: 匹配以n开头的字符串</li>
+<li>?=n: 匹配任何其后紧跟指定字符串n的字符串</li>
+<li>?!n: 匹配其后没有紧跟指定字符串n的字符串</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 
       
     </div>
@@ -343,21 +486,13 @@
 
     <footer class="post-footer">
       
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/06/13/hello-world/" rel="next" title="JavaScript 不能不了解的知识">
-                <i class="fa fa-chevron-left"></i> JavaScript 不能不了解的知识
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
         </div>
+      
+
       
 
       
@@ -368,6 +503,29 @@
 
 
     <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
       
     </div>
   </div>
@@ -381,7 +539,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/06/13/javascript/"
-           data-title="javascript" data-url="http://babymaychen.github.io/2016/06/13/javascript/">
+           data-title="Javascript 基础" data-url="http://babymaychen.github.io/2016/06/13/javascript/">
       </div>
     
   </div>
@@ -426,11 +584,11 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
-
+        
           
             <div class="site-state-item site-state-categories">
               
@@ -472,7 +630,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript-介绍"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object对象"><span class="nav-number">3.</span> <span class="nav-text">Object对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-对象"><span class="nav-number">4.</span> <span class="nav-text">Array 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-对象"><span class="nav-number">5.</span> <span class="nav-text">String 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RegExp-对象"><span class="nav-number">6.</span> <span class="nav-text">RegExp 对象</span></a></li></ol></div>
             
           </div>
         </section>
@@ -510,6 +668,22 @@
 </div>
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>
@@ -621,116 +795,138 @@
 
   
   
-  
-
-  
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("MCb2K7FONgepwKa36a2isIQc-gzGzoHsz", "d1M805HJlrUVkOsCsWOFiwO5");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
     }
+    var path = "/" + search_path;
+    // monitor main search box;
 
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
 
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
             });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
+            proceedsearch();
         }
-      });
-    }
+    });}
 
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
     });
   </script>
 
+  
 
+  
 
   
 
