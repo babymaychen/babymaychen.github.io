@@ -4,6 +4,136 @@
   
     
     <entry>
+      <title><![CDATA[CSS 使用技巧]]></title>
+      <url>http://babymaychen.github.io/2016/06/14/css/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p><strong>CSS</strong>是显示网页的很棒的语言，也是很好学的语言，初学css的人在修改一些样式时，往往显得力不从心，因为自己就经历过，可能明明我改了这个颜色，但是却没生效，或者我想让这个div在页面的中间显示，但是就是不在中间，要不就是不理解float、position等不好理解的属性，下面就开始学习吧。</p>
+</blockquote>
+<p> <img src="/uploads/css.png" alt="css"></p>
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>浏览器是通过判断优先级来决定哪些元素应用哪些样式的，如果优先级相同，浏览器会应用css中靠后声明的。</p>
+<ol>
+<li><p>优先级顺序(由低到高)</p>
+<ul>
+<li>通用选择器*</li>
+<li>元素(类型)选择器</li>
+<li>类选择器</li>
+<li>属性选择器</li>
+<li>伪类</li>
+<li>ID 选择器</li>
+<li>内联样式</li>
+</ul>
+</li>
+<li><p>!important(不推荐)</p>
+<p>   它的优先级会超越任何地方、任何方式的样式声明，包括行内style属性中声明的样式。不推荐这个用法的原因是，这会导致我们不好调试，找不到哪里给强制了，所以还是推荐使用css的级联属性。</p>
+</li>
+<li><p>级联属性(推荐)</p>
+<p>缩小选择的范围，使你的选择器更有针对性而提高优先级：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;test&quot;&gt; </span><br><span class="line">  &lt;span&gt;Text&lt;/span&gt;     </span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">div#test span &#123; color: green &#125;</span><br><span class="line">span &#123; color: red &#125;</span><br><span class="line">div span &#123; color: blue &#125;</span><br></pre></td></tr></table></figure>
+<p>无论css语句顺序是怎样的，都会显示绿色，因为只有这条规则范围最小，优先级最高。</p>
+</li>
+</ol>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><p>css的布局是很常用也是用不好的一个部分，学好布局，你就离成功很近了。</p>
+<ol>
+<li><p>display<br>  none：隐藏对象。与visibility的hidden不同，其不保存物理空间。<br>  inline：指定对象为内联元素。(默认值)。<br>  block：指定对象为块元素。<br>  inline-block：指定对象为内联块元素。</p>
+<h4 id="内联元素-也叫行内元素"><a href="#内联元素-也叫行内元素" class="headerlink" title="内联元素(也叫行内元素)"></a>内联元素(也叫行内元素)</h4><p>  行内元素不可以设置宽（width）和高（height），但可以与其他行内元素位于同一行，行内元素内一般不可以包含块级元素。行内元素的高度一般由元素内部的字体大小决定，宽度由内容的长度控制，可以有padding和margin，给内联元素设置padding和margin只会影响元素水平方向上的空间，垂直方向上的空间不会发生变化。常见的行内元素有a, em ,strong等。</p>
+<h4 id="块元素-也叫块级元素"><a href="#块元素-也叫块级元素" class="headerlink" title="块元素(也叫块级元素)"></a>块元素(也叫块级元素)</h4><p>  块状元素排斥其他元素与其位于同一行，可以设定元素的宽（width）和高（height），块级元素一般是其他元素的容器，可容纳块级元素和行内元素。常见的块级元素有div, p ,h1~h6等。</p>
+<h4 id="内联块元素"><a href="#内联块元素" class="headerlink" title="内联块元素"></a>内联块元素</h4><p>  与行内元素类似，但是可以为Inline-block元素设置宽度和高度。给Inline-block元素设置宽度和高度将会影响该元素的水平和垂直方向上的空间。  </p>
+</li>
+<li><p>float<br>  none：设置对象不浮动。(默认值)<br>  left：设置对象浮在左边。<br>  right：设置对象浮在右边。</p>
+<h4 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h4><p>  浮动模型也是一种可视化格式模型，浮动的框可以左右移动（根据float属性值而定），直到它的外边缘碰到包含框或者另一个浮动元素的框的边缘。浮动元素不在文档的普通流中，文档的普通流中的元素表现的就像浮动元素不存在一样。下面是我定义了三个div来举例说明。</p>
+<p>  1.默认状态下，float：none</p>
+<pre><code>div    {
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+}
+.a {
+    background-color: #85b730;
+}
+.b {
+    background-color: #e4bd0a;
+}
+.c {
+    background-color: #de4040;
+}
+
+&lt;div class=&quot;a&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;b&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;c&quot;&gt;&lt;/div&gt;
+</code></pre><p>  <img src="/uploads/float-1.png" alt="float-1"></p>
+<p>  2.向右浮动，float:right;<br>  因为绿色的框脱离了文档流，它并不占空间，所以黄色的框可以和它共处一行</p>
+<pre><code>.a {
+    background-color: #85b730;
+    float: right;
+}
+</code></pre><p>  <img src="/uploads/float-2.png" alt="float-2"></p>
+<p>  3.向左浮动，float:left; 因为绿色的框脱离了文档流，它并不占空间，所以挡住了黄色的框</p>
+<pre><code>.a {
+    background-color: #85b730;
+    float: left;
+}
+</code></pre><p>  <img src="/uploads/float-3.png" alt="float-3"></p>
+<p>  4.全部向左浮动，<br>  因为黄色的框碰到了另一个浮动的框（绿色的框），所以停住了，同理红色的框遇到黄色的框</p>
+<pre><code>div {
+    float: left;
+}
+</code></pre><p>  <img src="/uploads/float-4.png" alt="float-4"></p>
+<p>  5.全部向左浮动，<br>  当浮动框的长度很大，放不下三个框时，第三个框会向下移动</p>
+<pre><code>div {
+    width: 600px;
+    height: 100px;
+    float: left;
+}
+</code></pre><p>  <img src="/uploads/float-5.png" alt="float-5"></p>
+<p>  6.全部向左浮动，<br>  绿色框高度变大，挡住了向下的红色框</p>
+<pre><code>.a {
+    height: 200px;
+}
+
+div {
+    float: left;
+}
+</code></pre><p>  <img src="/uploads/float-6.png" alt="float-6"></p>
+<p>  注意事项：float在绝对定位和display为none时不生效。</p>
+</li>
+<li><p>clear<br>  none：允许两边都有浮动对象。(默认值)<br>  left：不允许左边有浮动对象。<br>  right：不允许右边有浮动对象。<br>  both：不允许有浮动对象。</p>
+<h4 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h4><p>  该属性的值指出了不允许有浮动对象的边。</p>
+<ul>
+<li><p>clear: left; 该对象的左边不能挨着浮动对象的边，第二个框会向下移动。<br>  <code>.b { clear: left; }</code><br>  <code>div { float: left; }</code></p>
+<p><img src="/uploads/clear-1.png" alt="clear-1"></p>
+</li>
+</ul>
+<ol>
+<li><p>clear: right; 该对象的右边不能挨着浮动对象的边。</p>
+<p> <code>.b { clear: right; }</code><br> <code>div { float: left; }</code></p>
+<p><img src="/uploads/float-4.png" alt="float-4"></p>
+<p>这样做之后我们发现，红框文思没动，这不是我们想要的，<strong>一定要牢记：这个规则只能影响使用清除的元素本身，不能影响其他元素</strong>，如果想要让红框下去，我们只能作用在红框身上</p>
+<p> <code>.c { clear: left; }</code><br> <code>div { float: left; }</code></p>
+<p><img src="/uploads/clear-1.png" alt="clear-1"></p>
+</li>
+</ol>
+</li>
+<li><p>overflow</p>
+<p>visible：对溢出内容不做处理，内容可能会超出容易。(默认)<br>   hidden：隐藏溢出容易的内容且不出现滚动条。<br>   scroll：隐藏溢出容器的内容，溢出的内容将以滚动条的方式显示。<br>auto：当内容没有溢出时不出现滚动条，当内容溢出容器时出现滚动条。</p>
+</li>
+</ol>
+<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p>允许你对元素进行定位</p>
+<p>   1.position</p>
+<ul>
+<li>static：对象遵循常规流。此时4个定位偏移属性不会被应用。</li>
+<li>relative：对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。</li>
+<li>absolute：对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</li>
+<li><p>fixed：与absolute一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。</p>
+<p>注意：<strong>想要在某个父元素里定位absolute的，一定要确认该父元素是否是relative。</strong></p>
+<p>例：我们想让b元素在a元素中离左边10个像素，但是当没有给a元素定义position:relative时,b元素没有在a元素中，而是离body左边10个像素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">div	&#123;</span><br><span class="line">	border: 1px solid red;</span><br><span class="line">&#125;</span><br><span class="line">.a &#123;</span><br><span class="line">	width: 60px;</span><br><span class="line">	height: 60px;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	background-color: #85b730;</span><br><span class="line">&#125;</span><br><span class="line">.b &#123;</span><br><span class="line">	width: 30px;</span><br><span class="line">	height: 30px;</span><br><span class="line">	position: absolute;</span><br><span class="line">	left: 10px;</span><br><span class="line">	background-color: #e4bd0a;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line">&lt;div class=&quot;a&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;b&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/position-1.png" alt="position-1"></p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Javascript 基础]]></title>
       <url>http://babymaychen.github.io/2016/06/13/javascript/</url>
       <content type="html"><![CDATA[<blockquote>
