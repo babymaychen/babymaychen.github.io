@@ -4,12 +4,111 @@
   
     
     <entry>
+      <title><![CDATA[CSS 使用技巧]]></title>
+      <url>http://babymaychen.github.io/2016/06/15/css-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>掌握css的使用技巧可以减少很多Google的时间，逼格也瞬间提升，这篇文章记录了一些必要的技巧，供自己和大家参考。</p>
+</blockquote>
+<p><img src="/uploads/css.png" alt="css"></p>
+<h3 id="1-块级元素的水平居中"><a href="#1-块级元素的水平居中" class="headerlink" title="1. 块级元素的水平居中"></a>1. 块级元素的水平居中</h3><p>先为该元素设定一个明确的宽度，然后将margin的水平值设为auto。</p>
+<pre><code>div#page {width: 960px; margin: 0 auto}
+</code></pre><h3 id="2-块级元素的水平-垂直居中"><a href="#2-块级元素的水平-垂直居中" class="headerlink" title="2. 块级元素的水平+垂直居中"></a>2. 块级元素的水平+垂直居中</h3><p>水平居中很容易，但是垂直居中就显得力不从心，大家也都会用定位，直接left:50%, top:50%，但是得到的效果却是…</p>
+<p><img src="/uploads/cssSkill-1.png" alt="cssSkill-1"></p>
+<p>这是因为定位是相对与该元素的左上角的，看图不难看出小方块的左上角确实在大方块的中心，这又该如何是好呢，我们可以<strong>让小方块分别向上和向左移动自身高度和宽度的一半距离</strong>，这样就能正好使其在大方块中间。</p>
+<pre><code>div    {
+    width: 60px;
+    height: 60px;
+    border: 1px solid red;
+}
+.a {
+    position: relative;
+    background-color: #85b730;
+}
+.b {
+    background-color: #e4bd0a;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15px;
+}
+
+&lt;div class=&quot;a&quot;&gt;
+    &lt;div class=&quot;b&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>但是问题又来了，如果我们不知道小方块的大小，或者大小是不固定的，那又怎么办呢，这时我们可以用css3的一个属性transform里的translate，后面会有介绍css3的文章的哈，在b里把margin换成这个属性，再试试。</p>
+<pre><code>transform:translate(-50%, -50%);
+</code></pre><p>当当当当，居中啦</p>
+<p><img src="/uploads/cssSkill-2.png" alt="cssSkill-2"></p>
+<h3 id="3-强制文字不换行"><a href="#3-强制文字不换行" class="headerlink" title="3. 强制文字不换行"></a>3. 强制文字不换行</h3><pre><code>white-space: nowrap;
+</code></pre><h3 id="4-当文字过长时出现点点点"><a href="#4-当文字过长时出现点点点" class="headerlink" title="4. 当文字过长时出现点点点"></a>4. 当文字过长时出现点点点</h3><pre><code>table td div {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow:ellipsis ;
+    white-space: nowrap;
+}
+</code></pre><h3 id="5-图片大小自适应"><a href="#5-图片大小自适应" class="headerlink" title="5. 图片大小自适应"></a>5. 图片大小自适应</h3><p>使得较大的图片，能够自动适应小容器的宽度</p>
+<pre><code>img {max-width: 100%}
+</code></pre><h3 id="6-装饰获得焦点的输入框"><a href="#6-装饰获得焦点的输入框" class="headerlink" title="6. 装饰获得焦点的输入框"></a>6. 装饰获得焦点的输入框</h3><pre><code>input:focus { border: 2px solid green; }
+</code></pre><h3 id="7-让一个方形的div变成圆形"><a href="#7-让一个方形的div变成圆形" class="headerlink" title="7. 让一个方形的div变成圆形"></a>7. 让一个方形的div变成圆形</h3><p>该方法可以让你的头像变成圆形</p>
+<pre><code>border-radius: 50%;
+</code></pre><h3 id="8-撑高父元素"><a href="#8-撑高父元素" class="headerlink" title="8. 撑高父元素"></a>8. 撑高父元素</h3><p>在编码的时候总会遇到这种情况，明明有子元素，子元素也有高度，但是这个父元素高度却是0，很棘手，这时就要想想，子元素可能不在文档的普通流中，并不占任何物理位置，如下</p>
+<pre><code>div    {
+    border: 1px solid red;
+}
+.a {
+    position: relative;
+    background-color: #85b730;
+}
+.b {
+    float: left;
+    background-color: #e4bd0a;
+    width: 30px;
+    height: 30px;
+}
+
+&lt;div class=&quot;a&quot;&gt;
+    &lt;div class=&quot;b&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><img src="/uploads/cssSkill-3.png" alt="cssSkill-3"></p>
+<p>再试试下面的代码</p>
+<pre><code>&lt;div class=&quot;a clearfix&quot;&gt;
+    &lt;div class=&quot;b&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+.clearfix:after {
+    content: &quot;.&quot;;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+</code></pre><h3 id="9-基础字体大小"><a href="#9-基础字体大小" class="headerlink" title="9. 基础字体大小"></a>9. 基础字体大小</h3><p>在一个多平台的页面，字体大小的设置应该随着窗口的大小变化而变化</p>
+<pre><code>body {font-size:62.5%}
+</code></pre><p>这时使用字体的时候用em，h1的大小就是24px</p>
+<pre><code>h1 {font-size: 2.4em}
+</code></pre><h3 id="10-蒙版"><a href="#10-蒙版" class="headerlink" title="10. 蒙版"></a>10. 蒙版</h3><p>半透明，后面的不可点</p>
+<pre><code>.modalBK {
+    position: fixed ;
+    left: 0 ;
+    top: 0 ;
+    z-index: 999 ;
+    height: 100% ;
+    width: 100% ;
+    background: #fff ;
+    opacity: 0.8 ;
+    filter: alpha(opacity =80) ;
+    -moz-opacity: 0.80;
+}
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[CSS 理解优先级、布局和定位]]></title>
       <url>http://babymaychen.github.io/2016/06/14/css/</url>
       <content type="html"><![CDATA[<blockquote>
 <p><strong>CSS</strong>是显示网页的很棒的语言，也是很好学的语言，初学css的人在修改一些样式时，往往显得力不从心，因为自己就经历过，可能明明我改了这个颜色，但是却没生效，或者我想让这个div在页面的中间显示，但是就是不在中间，要不就是不理解float、position等不好理解的属性，下面就开始学习吧。</p>
 </blockquote>
-<p> <img src="/uploads/css.png" alt="css"></p>
 <h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>浏览器是通过判断优先级来决定哪些元素应用哪些样式的，如果优先级相同，浏览器会应用css中靠后声明的。</p>
 <ol>
 <li><p>优先级顺序(由低到高)</p>
