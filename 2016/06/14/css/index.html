@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://babymaychen.github.io/uploads/float-4.png">
 <meta property="og:image" content="http://babymaychen.github.io/uploads/clear-1.png">
 <meta property="og:image" content="http://babymaychen.github.io/uploads/position-1.png">
-<meta property="og:updated_time" content="2016-06-15T00:49:29.246Z">
+<meta property="og:updated_time" content="2016-06-15T03:36:37.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 理解优先级、布局和定位">
 <meta name="twitter:description" content="CSS是显示网页的很棒的语言，也是很好学的语言，初学css的人在修改一些样式时，往往显得力不从心，因为自己就经历过，可能明明我改了这个颜色，但是却没生效，或者我想让这个div在页面的中间显示，但是就是不在中间，要不就是不理解float、position等不好理解的属性，下面就开始学习吧。
@@ -472,7 +472,7 @@ div {
 <ul>
 <li>static：对象遵循常规流。此时4个定位偏移属性不会被应用。</li>
 <li>relative：对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。</li>
-<li>absolute：对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</li>
+<li>absolute：<strong>对象脱离常规流</strong>，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</li>
 <li><p>fixed：与absolute一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。</p>
 <p>注意：<strong>想要在某个父元素里定位absolute的，一定要确认该父元素是否是relative。</strong></p>
 <p>例：我们想让b元素在a元素中离左边10个像素，但是当没有给a元素定义position:relative时,b元素没有在a元素中，而是离body左边10个像素</p>
@@ -615,7 +615,7 @@ div {
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -632,7 +632,7 @@ div {
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

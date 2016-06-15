@@ -4,6 +4,161 @@
   
     
     <entry>
+      <title><![CDATA[css3 transition]]></title>
+      <url>http://babymaychen.github.io/2016/06/15/css3-%E8%BF%87%E6%B8%A1/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>W3C标准中对CSS3的transition这是样描述的:“CSS的transition允许CSS的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。”</p>
+</blockquote>
+<h3 id="transition-主要有四个参数"><a href="#transition-主要有四个参数" class="headerlink" title="transition 主要有四个参数"></a>transition 主要有四个参数</h3><ul>
+<li><p>transition-property<br>检索或设置对象中的参与过渡的属性(全部就写all), 具体参照<a href="http://css.doyoe.com/properties/transition/transition-property.htm" target="_blank" rel="external">css手册</a></p>
+</li>
+<li><p>transition-duration<br>检索或设置对象过渡的持续时间</p>
+</li>
+<li><p>transition-timing-function<br>检索或设置对象中过渡的动画类型</p>
+</li>
+<li><p>transition-delay<br>检索或设置对象延迟过渡的时间</p>
+</li>
+</ul>
+<h3 id="transition-timing-function-参数介绍"><a href="#transition-timing-function-参数介绍" class="headerlink" title="transition-timing-function 参数介绍"></a>transition-timing-function 参数介绍</h3><ul>
+<li>linear: 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</li>
+<li>ease: 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</li>
+<li>ease-in: 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</li>
+<li>ease-out: 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</li>
+<li>ease-in-out: 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</li>
+<li>cubic-bezier(n,n,n,n): 特定的贝塞尔曲线类型,4个数值需在[0, 1]区间内。</li>
+</ul>
+<p>下面的例子会很好的理解这几个函数</p>
+<pre><code>&lt;div class=&quot;transition-container&quot;&gt;
+    &lt;div class=&quot;linear small&quot;&gt;linear&lt;/div&gt;
+    &lt;div class=&quot;ease small&quot;&gt;ease&lt;/div&gt;
+    &lt;div class=&quot;ease-in small&quot;&gt;ease-in&lt;/div&gt;
+    &lt;div class=&quot;ease-out small&quot;&gt;ease-out&lt;/div&gt;
+    &lt;div class=&quot;ease-in-out small&quot;&gt;ease-in-out&lt;/div&gt;
+&lt;/div&gt;
+
+div.small {
+    border: 3px solid #B1B6B9;
+    border-radius: 10px;
+    background-color: #ED8029;
+    color: white;
+    text-align: right;
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.linear {
+    -webkit-transition: 3s linear;
+    -moz-transition: 3s linear;
+    -o-transition: 3s linear;
+    -ms-transition: 3s linear;
+    transition: 3s linear;
+}
+
+.ease {
+    -webkit-transition: 3s ease;
+    -moz-transition: 3s ease;
+    -o-transition: 3s ease;
+    -ms-transition: 3s ease;
+    transition: 3s ease;
+}
+
+.ease-in {
+    -webkit-transition: 3s ease-in;
+    -moz-transition: 3s ease-in;
+    -o-transition: 3s ease-in;
+    -ms-transition: 3s ease-in;
+    transition: 3s ease-in;
+}
+
+.ease-out {
+    -webkit-transition: 3s ease-out;
+    -moz-transition: 3s ease-out;
+    -o-transition: 3s ease-out;
+    -ms-transition: 3s ease-out;
+    transition: 3s ease-out;
+}
+
+.ease-in-out {
+    -webkit-transition: 3s ease-in-out;
+    -moz-transition: 3s ease-in-out;
+    -o-transition: 3s ease-in-out;
+    -ms-transition: 3s ease-in-out;
+    transition: 3s ease-in-out;
+}
+
+.transition-container:hover div.small {
+    width: 100%;
+}
+</code></pre><p>把鼠标放到图片上看效果</p>
+<div class="transition-container"><br>    <div class="linear css3-transition-small">linear</div><br>    <div class="ease css3-transition-small">ease</div><br>    <div class="ease-in css3-transition-small">ease-in</div><br>    <div class="ease-out css3-transition-small">ease-out</div><br>    <div class="ease-in-out css3-transition-small">ease-in-out</div><br></div>
+
+<p>再来个例子，把鼠标放到图片上看效果</p>
+<pre><code>.css3-transition-div {
+    cursor: pointer;
+    width: 300px;
+    height: 220px;
+    border: 3px solid #B1B6B9;
+    box-shadow: 5px 5px 5px #888888;
+    transition: transform:scale 0.9s ease-in;
+    background: url(../images/autumn.png) no-repeat;
+}
+
+.css3-transition-div:hover {
+    transform: scale(0.4, 0.4);
+}
+
+&lt;div class=&quot;css3-transition-div&quot;&gt;
+&lt;/div&gt;
+</code></pre><div class="css3-transition-div"><br></div>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[css3 transform]]></title>
+      <url>http://babymaychen.github.io/2016/06/15/css3-%E5%8F%98%E6%8D%A2/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。</p>
+</blockquote>
+<pre><code>这些改变全是以自身为参考的哈，改变么，就是自己的改变。
+注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
+</code></pre><h3 id="移动（translate）"><a href="#移动（translate）" class="headerlink" title="移动（translate）"></a>移动（translate）</h3><p>translate(x,y)：指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0。</p>
+<p>translatex(x)：指定对象X轴（水平方向）的平移。</p>
+<p>translatey(y)：指定对象Y轴（水平方向）的平移。</p>
+<p>translate3d(x,y,z)：指定对象的3D位移。第1个参数对应X轴，第2个参数对应Y轴，第3个参数对应Z轴。</p>
+<h3 id="旋转（rotate）"><a href="#旋转（rotate）" class="headerlink" title="旋转（rotate）"></a>旋转（rotate）</h3><p>rotate(angle)：2D旋转，参数是规定的角度(默认的旋转中心是中心)。与transform-origin配合使用，transform-origin定义旋转的基本点，正值是顺时针，负值是逆时针。例如</p>
+<pre><code>div {
+    border: 3px solid #B1B6B9;
+    position: absolute;
+    box-shadow: 5px 5px 5px #888888;
+    top: 30%;
+    left: 50%;
+    transform: rotate(10deg);
+    transform-origin: right top;
+}
+img {
+    max-width: 100%;
+    margin: 10px;
+}
+
+&lt;div&gt;
+    &lt;img src=&quot;autumn.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+</code></pre><p><img src="/uploads/rotate-1.png" alt="rotate-1"></p>
+<p>rotateX(angle)：指定对象在x轴上的旋转角度</p>
+<p>rotateY(angle)：指定对象在y轴上的旋转角度</p>
+<p>rotateZ(angle)：指定对象在z轴上的旋转角度</p>
+<p>rotate3d(x,y,z,angle)：3D旋转，x、y、z分别表示三个轴他们的值可以是0或1，rotate3d(1, 0, 0,angle)等同于rotateX(angle), rotate3d(0, 1, 0,angle)等同于rotateY(angle), rotate3d(0, 0, 1,angle)等同于rotateZ(angle)。</p>
+<h3 id="缩放（scale）"><a href="#缩放（scale）" class="headerlink" title="缩放（scale）"></a>缩放（scale）</h3><p>scale(x,y): 2D缩放x、y分别表示在x轴和y轴上缩放的大小，大于1就是放大小于1就是缩小，如果第二个参数未提供，则默认取第一个参数的值。把参数换成负数，会有很好玩的事情发生哦。</p>
+<p>scalex(x): 只缩放x轴上的大小。</p>
+<p>scaley(y): 只缩放y轴上的大小。</p>
+<p>scale3d(x, y, z): 3D缩放，x、y、z分别表示x轴、y轴和z轴上的缩放大小。</p>
+<h3 id="扭曲（skew）"><a href="#扭曲（skew）" class="headerlink" title="扭曲（skew）"></a>扭曲（skew）</h3><p>skew(x-angle,y-angle)：指定对象沿着 X 和 Y 轴的 2D 倾斜转换。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0。</p>
+<p>skewX(angle)：指定对象沿着 X 轴的 2D 倾斜转换。</p>
+<p>skewY(angle)：指定对象沿着 Y 轴的 2D 倾斜转换。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[CSS 使用技巧]]></title>
       <url>http://babymaychen.github.io/2016/06/15/css-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -53,7 +208,7 @@
 </code></pre><h3 id="6-装饰获得焦点的输入框"><a href="#6-装饰获得焦点的输入框" class="headerlink" title="6. 装饰获得焦点的输入框"></a>6. 装饰获得焦点的输入框</h3><pre><code>input:focus { border: 2px solid green; }
 </code></pre><h3 id="7-让一个方形的div变成圆形"><a href="#7-让一个方形的div变成圆形" class="headerlink" title="7. 让一个方形的div变成圆形"></a>7. 让一个方形的div变成圆形</h3><p>该方法可以让你的头像变成圆形</p>
 <pre><code>border-radius: 50%;
-</code></pre><h3 id="8-撑高父元素"><a href="#8-撑高父元素" class="headerlink" title="8. 撑高父元素"></a>8. 撑高父元素</h3><p>在编码的时候总会遇到这种情况，明明有子元素，子元素也有高度，但是这个父元素高度却是0，很棘手，这时就要想想，子元素可能不在文档的普通流中，并不占任何物理位置，如下</p>
+</code></pre><h3 id="8-撑高父元素"><a href="#8-撑高父元素" class="headerlink" title="8. 撑高父元素"></a>8. 撑高父元素</h3><p>在编码的时候总会遇到这种情况，明明有子元素，子元素也有高度，但是这个父元素高度却是0，很棘手，这时就要想想，子元素可能<strong>不在文档的普通流中，并不占任何物理位置，并且不会独占一行</strong>，如下</p>
 <pre><code>div    {
     border: 1px solid red;
 }
@@ -221,7 +376,7 @@ div {
 <ul>
 <li>static：对象遵循常规流。此时4个定位偏移属性不会被应用。</li>
 <li>relative：对象遵循常规流，并且参照自身在常规流中的位置通过top，right，bottom，left这4个定位偏移属性进行偏移时不会影响常规流中的任何元素。</li>
-<li>absolute：对象脱离常规流，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</li>
+<li>absolute：<strong>对象脱离常规流</strong>，此时偏移属性参照的是离自身最近的定位祖先元素，如果没有定位的祖先元素，则一直回溯到body元素。盒子的偏移位置不影响常规流中的任何元素，其margin不与其他任何margin折叠。</li>
 <li><p>fixed：与absolute一致，但偏移定位是以窗口为参考。当出现滚动条时，对象不会随着滚动。</p>
 <p>注意：<strong>想要在某个父元素里定位absolute的，一定要确认该父元素是否是relative。</strong></p>
 <p>例：我们想让b元素在a元素中离左边10个像素，但是当没有给a元素定义position:relative时,b元素没有在a元素中，而是离body左边10个像素</p>
