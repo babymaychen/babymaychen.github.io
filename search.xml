@@ -4,6 +4,55 @@
   
     
     <entry>
+      <title><![CDATA[css3 animation]]></title>
+      <url>http://babymaychen.github.io/2016/06/16/css3-%E5%8A%A8%E7%94%BB/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>CSS3 animations allows animation of most HTML elements without using JavaScript or Flash! 用css也可以写出漂亮的动画，使用keyframe来指定css属性随着时间的变化。animation类似与transition，因为它们都是随时间改变css属性的。主要区别是，transition是当值改变时触发，animation实在animation属性被应用后明确的执行。</p>
+</blockquote>
+<h3 id="关键帧-keyframes-规则"><a href="#关键帧-keyframes-规则" class="headerlink" title="关键帧(@keyframes) 规则"></a>关键帧(@keyframes) 规则</h3><p>关键帧被用于在动画过程中指定用于在各个点的动画属性的值。关键帧指定了动画的一个周期的行为，动画可以迭代一次或多次.一个@keyframes规则包含了关键字@keyframes，然后跟着标识符给出动画的名称（它会被animation-name引用到），最后是一组样式规则（由大括号分隔）。为了确定该组的关键帧，所有的选择器的值按时间递增顺序排序。如果有任何重复，那么@keyframes规则内指定的最后一个关键帧将被用于提供那时关键帧的信息。如果有多个关键帧指定了相同的关键帧选择器值时，在@keyframes规则中不会重叠。</p>
+<p><strong> 语法 </strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@keyframes &lt;identifier&gt; &#123; &lt;keyframes-blocks&gt; &#125;</span><br><span class="line">&lt;keyframes-blocks&gt;：[ [ from | to | &lt;percentage&gt; ]&#123; sRules &#125; ] [ [ , from | to | &lt;percentage&gt; ]&#123; sRules &#125; ]*</span><br></pre></td></tr></table></figure>
+<p><strong> 取值 </strong></p>
+<ul>
+<li>identifier：identifier定义一个动画名称</li>
+<li>keyframes-blocks：定义动画在每个阶段的样式，即帧动画。</li>
+</ul>
+<h3 id="animation-属性"><a href="#animation-属性" class="headerlink" title="animation 属性"></a>animation 属性</h3><p>animation: name duration timing-function delay iteration-count direction fill-mode play-state;</p>
+<ul>
+<li>animation-name：规定需要绑定到选择器的 keyframe 名称。</li>
+<li>animation-duration：规定完成动画所花费的时间，以秒或毫秒计。</li>
+<li>animation-timing-function：规定动画的速度曲线。</li>
+<li>animation-delay：规定在动画开始之前的延迟。</li>
+<li>animation-iteration-count：规定动画应该播放的次数(infinite或者是数字)。</li>
+<li>animation-direction：规定是否应该轮流反向播放动画。</li>
+<li>animation-fill-mode：检索或设置对象动画时间之外的状态。</li>
+<li>animation-play-state：检索或设置对象动画的状态。</li>
+</ul>
+<h4 id="animation-direction"><a href="#animation-direction" class="headerlink" title="animation-direction"></a>animation-direction</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>normal：正常方向</li>
+<li>reverse: 反方向运行(从100%到0%)</li>
+<li>alternate：动画先正常运行再反方向运行，并持续交替运行</li>
+<li>alternate-reverse：动画先反运行再正方向运行，并持续交替运行</li>
+</ul>
+<p>alternate 的例子</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation-1</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">90px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">90px</span>;</span><br><span class="line">	<span class="attribute">animation</span>: myfirst <span class="number">5s</span> infinite;</span><br><span class="line">	<span class="attribute">-webkit-animation</span>: myfirst <span class="number">5s</span> infinite; <span class="comment">/* Chrome, Safari, Opera */</span></span><br><span class="line">	<span class="attribute">-webkit-animation-direction</span>: alternate; <span class="comment">/* Chrome, Safari, Opera */</span></span><br><span class="line">	<span class="attribute">animation-direction</span>: alternate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@-<span class="keyword">webkit</span>-<span class="keyword">keyframes</span> myfirst &#123;</span><br><span class="line">    0%   &#123;<span class="attribute">background</span>: red; <span class="attribute">left</span>: <span class="number">0px</span>; <span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">    100% &#123;<span class="attribute">background</span>: yellow; <span class="attribute">left</span>: <span class="number">80%</span>; <span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> myfirst &#123;</span><br><span class="line">    0%   &#123;<span class="attribute">background</span>: red; <span class="attribute">left</span>: <span class="number">0px</span>; <span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">    100% &#123;<span class="attribute">background</span>: yellow; <span class="attribute">left</span>: <span class="number">80%</span>; <span class="attribute">top</span>: <span class="number">0px</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"animation-1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<div class="animation-1"></div>
+
+<h4 id="animation-play-state"><a href="#animation-play-state" class="headerlink" title="animation-play-state"></a>animation-play-state</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-play-state: running | paused</span><br></pre></td></tr></table></figure>
+<p>属性规定动画正在运行还是暂停。</p>
+<h4 id="animation-fill-mode"><a href="#animation-fill-mode" class="headerlink" title="animation-fill-mode"></a>animation-fill-mode</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation-fill-mode: none|forwards|backwards|both|initial|inherit;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>none：默认值。不设置对象动画之外的状态</li>
+<li>forwards：设置对象状态为动画结束时的状态</li>
+<li>backwards：设置对象状态为动画开始时的状态</li>
+<li>both：设置对象状态为动画结束或开始的状态</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[css3 transition]]></title>
       <url>http://babymaychen.github.io/2016/06/15/css3-%E8%BF%87%E6%B8%A1/</url>
       <content type="html"><![CDATA[<blockquote>
