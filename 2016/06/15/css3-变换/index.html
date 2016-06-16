@@ -49,13 +49,25 @@
   
 
   
+    
+      
+    
 
+    
+  
+
+  
+    
+      
+    
+
+    
   
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PingFang SC:300,300italic,400,400italic,700,700italic|kaiti:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -84,29 +96,23 @@
 
 
 
-<meta name="description" content="transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。
+<meta name="description" content="transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。这些改变全是以自身为参考的哈，改变么，就是自己的改变。注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
 
-这些改变全是以自身为参考的哈，改变么，就是自己的改变。
-注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
-移动（translate）translate(x,y)：指定对象的2D translation（2D平移">
+移动（translate）translate(x,y)：指定对象的2D translation（2D平移）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css3 transform">
 <meta property="og:url" content="http://babymaychen.github.io/2016/06/15/css3-变换/index.html">
 <meta property="og:site_name" content="孙小妹的博客">
-<meta property="og:description" content="transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。
+<meta property="og:description" content="transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。这些改变全是以自身为参考的哈，改变么，就是自己的改变。注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
 
-这些改变全是以自身为参考的哈，改变么，就是自己的改变。
-注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
-移动（translate）translate(x,y)：指定对象的2D translation（2D平移">
+移动（translate）translate(x,y)：指定对象的2D translation（2D平移）。">
 <meta property="og:image" content="http://babymaychen.github.io/uploads/rotate-1.png">
-<meta property="og:updated_time" content="2016-06-15T06:54:14.966Z">
+<meta property="og:updated_time" content="2016-06-16T02:40:39.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3 transform">
-<meta name="twitter:description" content="transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。
+<meta name="twitter:description" content="transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。这些改变全是以自身为参考的哈，改变么，就是自己的改变。注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
 
-这些改变全是以自身为参考的哈，改变么，就是自己的改变。
-注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
-移动（translate）translate(x,y)：指定对象的2D translation（2D平移">
+移动（translate）translate(x,y)：指定对象的2D translation（2D平移）。">
 <meta name="twitter:image" content="http://babymaychen.github.io/uploads/rotate-1.png">
 
 
@@ -119,8 +125,8 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: '博主'
+      userId: 6272842535618479000,
+      author: '博主_孙小妹'
     }
   };
 </script>
@@ -364,33 +370,19 @@
 
       
         <blockquote>
-<p>transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。</p>
+<p>transform的含义就是改变，使…变形，很好理解，这篇文章也是css3的第一篇，让我进入css3的大门，开始前进吧。这些改变全是以自身为参考的哈，改变么，就是自己的改变。<br>注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。</p>
 </blockquote>
-<pre><code>这些改变全是以自身为参考的哈，改变么，就是自己的改变。
-注：这里的x、y、z可以大写也可以小写，如：translatex(x) 和 translateX(x) 都可以。
-</code></pre><h3 id="移动（translate）"><a href="#移动（translate）" class="headerlink" title="移动（translate）"></a>移动（translate）</h3><p>translate(x,y)：指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0。</p>
+<h3 id="移动（translate）"><a href="#移动（translate）" class="headerlink" title="移动（translate）"></a>移动（translate）</h3><p>translate(x,y)：指定对象的2D translation（2D平移）。第一个参数对应X轴，第二个参数对应Y轴。如果第二个参数未提供，则默认值为0。</p>
 <p>translatex(x)：指定对象X轴（水平方向）的平移。</p>
 <p>translatey(y)：指定对象Y轴（水平方向）的平移。</p>
 <p>translate3d(x,y,z)：指定对象的3D位移。第1个参数对应X轴，第2个参数对应Y轴，第3个参数对应Z轴。</p>
 <h3 id="旋转（rotate）"><a href="#旋转（rotate）" class="headerlink" title="旋转（rotate）"></a>旋转（rotate）</h3><p>rotate(angle)：2D旋转，参数是规定的角度(默认的旋转中心是中心)。与transform-origin配合使用，transform-origin定义旋转的基本点，正值是顺时针，负值是逆时针。例如</p>
-<pre><code>div {
-    border: 3px solid #B1B6B9;
-    position: absolute;
-    box-shadow: 5px 5px 5px #888888;
-    top: 30%;
-    left: 50%;
-    transform: rotate(10deg);
-    transform-origin: right top;
-}
-img {
-    max-width: 100%;
-    margin: 10px;
-}
-
-&lt;div&gt;
-    &lt;img src=&quot;autumn.png&quot; alt=&quot;&quot;&gt;
-&lt;/div&gt;
-</code></pre><p><img src="/uploads/rotate-1.png" alt="rotate-1"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#B1B6B9</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">5px</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">#888888</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">30%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(10deg);</span><br><span class="line">    <span class="attribute">transform-origin</span>: right top;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="html"><span class="tag">&lt;<span class="name">div</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"autumn.png"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+<p><img src="/uploads/rotate-1.png" alt="rotate-1"></p>
 <p>rotateX(angle)：指定对象在x轴上的旋转角度</p>
 <p>rotateY(angle)：指定对象在y轴上的旋转角度</p>
 <p>rotateZ(angle)：指定对象在z轴上的旋转角度</p>
@@ -415,6 +407,27 @@ img {
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat-reward-image.png" alt="孙小妹 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay-reward-image.jpg" alt="孙小妹 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -565,6 +578,26 @@ img {
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/babymaychen" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/sun-chen-86-2" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
           
         </div>
 
@@ -738,6 +771,10 @@ img {
   </script>
 
   
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
     
   
 
