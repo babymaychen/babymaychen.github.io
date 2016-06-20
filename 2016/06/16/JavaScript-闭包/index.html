@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css3," />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -96,31 +96,25 @@
 
 
 
-<meta name="description" content="W3C标准中对CSS3的transition这是样描述的:“CSS的transition允许CSS的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。”
+<meta name="description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
 
-transition 主要有四个参数
-transition-property检索或设置对象中的参与过渡的属性(全部就写all), 具体参照css手册
-
-t">
+特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机制回收
+创建函数的方法在JavaScript中创建函数的方法有两种">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css3 transition">
-<meta property="og:url" content="http://babymaychen.github.io/2016/06/15/css3-过渡/index.html">
+<meta property="og:title" content="JavaScript 闭包">
+<meta property="og:url" content="http://babymaychen.github.io/2016/06/16/JavaScript-闭包/index.html">
 <meta property="og:site_name" content="孙小妹的博客">
-<meta property="og:description" content="W3C标准中对CSS3的transition这是样描述的:“CSS的transition允许CSS的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。”
+<meta property="og:description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
 
-transition 主要有四个参数
-transition-property检索或设置对象中的参与过渡的属性(全部就写all), 具体参照css手册
-
-t">
-<meta property="og:updated_time" content="2016-06-16T02:27:45.663Z">
+特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机制回收
+创建函数的方法在JavaScript中创建函数的方法有两种">
+<meta property="og:updated_time" content="2016-06-20T05:44:01.397Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css3 transition">
-<meta name="twitter:description" content="W3C标准中对CSS3的transition这是样描述的:“CSS的transition允许CSS的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。”
+<meta name="twitter:title" content="JavaScript 闭包">
+<meta name="twitter:description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
 
-transition 主要有四个参数
-transition-property检索或设置对象中的参与过渡的属性(全部就写all), 具体参照css手册
-
-t">
+特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机制回收
+创建函数的方法在JavaScript中创建函数的方法有两种">
 
 
 
@@ -141,9 +135,9 @@ t">
 
 
 
-  <link rel="canonical" href="http://babymaychen.github.io/2016/06/15/css3-过渡/"/>
+  <link rel="canonical" href="http://babymaychen.github.io/2016/06/16/JavaScript-闭包/"/>
 
-  <title> css3 transition | 孙小妹的博客 </title>
+  <title> JavaScript 闭包 | 孙小妹的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -296,7 +290,7 @@ t">
             
             
               
-                css3 transition
+                JavaScript 闭包
               
             
           </h1>
@@ -308,8 +302,8 @@ t">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-15T14:55:08+08:00" content="2016-06-15">
-              2016-06-15
+            <time itemprop="dateCreated" datetime="2016-06-16T16:56:56+08:00" content="2016-06-16">
+              2016-06-16
             </time>
           </span>
 
@@ -338,8 +332,8 @@ t">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/15/css3-过渡/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/15/css3-过渡/" itemprop="commentsCount"></span>
+                <a href="/2016/06/16/JavaScript-闭包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/JavaScript-闭包/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,7 +343,7 @@ t">
 
           
           
-             <span id="/2016/06/15/css3-过渡/" class="leancloud_visitors" data-flag-title="css3 transition">
+             <span id="/2016/06/16/JavaScript-闭包/" class="leancloud_visitors" data-flag-title="JavaScript 闭包">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -377,37 +371,20 @@ t">
 
       
         <blockquote>
-<p>W3C标准中对CSS3的transition这是样描述的:“CSS的transition允许CSS的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值。”</p>
+<p>闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。</p>
 </blockquote>
-<h3 id="transition-主要有四个参数"><a href="#transition-主要有四个参数" class="headerlink" title="transition 主要有四个参数"></a>transition 主要有四个参数</h3><ul>
-<li><p>transition-property<br>检索或设置对象中的参与过渡的属性(全部就写all), 具体参照<a href="http://css.doyoe.com/properties/transition/transition-property.htm" target="_blank" rel="external">css手册</a></p>
-</li>
-<li><p>transition-duration<br>检索或设置对象过渡的持续时间</p>
-</li>
-<li><p>transition-timing-function<br>检索或设置对象中过渡的动画类型</p>
-</li>
-<li><p>transition-delay<br>检索或设置对象延迟过渡的时间</p>
-</li>
-</ul>
-<h3 id="transition-timing-function-参数介绍"><a href="#transition-timing-function-参数介绍" class="headerlink" title="transition-timing-function 参数介绍"></a>transition-timing-function 参数介绍</h3><ul>
-<li>linear: 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</li>
-<li>ease: 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</li>
-<li>ease-in: 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</li>
-<li>ease-out: 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</li>
-<li>ease-in-out: 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</li>
-<li>cubic-bezier(n,n,n,n): 特定的贝塞尔曲线类型,4个数值需在[0, 1]区间内。</li>
-</ul>
-<p>下面的例子会很好的理解这几个函数</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"transition-container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"linear small"</span>&gt;</span>linear<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ease small"</span>&gt;</span>ease<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ease-in small"</span>&gt;</span>ease-in<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ease-out small"</span>&gt;</span>ease-out<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ease-in-out small"</span>&gt;</span>ease-in-out<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.small</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#B1B6B9</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ED8029</span>;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">text-align</span>: right;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.linear</span> &#123;</span><br><span class="line">	<span class="attribute">-webkit-transition</span>: <span class="number">3s</span> linear;</span><br><span class="line">	<span class="attribute">-moz-transition</span>: <span class="number">3s</span> linear;</span><br><span class="line">	<span class="attribute">-o-transition</span>: <span class="number">3s</span> linear;</span><br><span class="line">	<span class="attribute">-ms-transition</span>: <span class="number">3s</span> linear;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">3s</span> linear;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ease</span> &#123;</span><br><span class="line">	<span class="attribute">-webkit-transition</span>: <span class="number">3s</span> ease;</span><br><span class="line">	<span class="attribute">-moz-transition</span>: <span class="number">3s</span> ease;</span><br><span class="line">	<span class="attribute">-o-transition</span>: <span class="number">3s</span> ease;</span><br><span class="line">	<span class="attribute">-ms-transition</span>: <span class="number">3s</span> ease;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">3s</span> ease;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ease-in</span> &#123;</span><br><span class="line">	<span class="attribute">-webkit-transition</span>: <span class="number">3s</span> ease-in;</span><br><span class="line">	<span class="attribute">-moz-transition</span>: <span class="number">3s</span> ease-in;</span><br><span class="line">	<span class="attribute">-o-transition</span>: <span class="number">3s</span> ease-in;</span><br><span class="line">	<span class="attribute">-ms-transition</span>: <span class="number">3s</span> ease-in;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">3s</span> ease-in;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ease-out</span> &#123;</span><br><span class="line">	<span class="attribute">-webkit-transition</span>: <span class="number">3s</span> ease-out;</span><br><span class="line">	<span class="attribute">-moz-transition</span>: <span class="number">3s</span> ease-out;</span><br><span class="line">	<span class="attribute">-o-transition</span>: <span class="number">3s</span> ease-out;</span><br><span class="line">	<span class="attribute">-ms-transition</span>: <span class="number">3s</span> ease-out;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">3s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.ease-in-out</span> &#123;</span><br><span class="line">	<span class="attribute">-webkit-transition</span>: <span class="number">3s</span> ease-in-out;</span><br><span class="line">	<span class="attribute">-moz-transition</span>: <span class="number">3s</span> ease-in-out;</span><br><span class="line">	<span class="attribute">-o-transition</span>: <span class="number">3s</span> ease-in-out;</span><br><span class="line">	<span class="attribute">-ms-transition</span>: <span class="number">3s</span> ease-in-out;</span><br><span class="line">	<span class="attribute">transition</span>: <span class="number">3s</span> ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.transition-container</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">div</span><span class="selector-class">.small</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>把鼠标放到图片上看效果</p>
-<div class="transition-container"><br>    <div class="linear css3-transition-small">linear</div><br>    <div class="ease css3-transition-small">ease</div><br>    <div class="ease-in css3-transition-small">ease-in</div><br>    <div class="ease-out css3-transition-small">ease-out</div><br>    <div class="ease-in-out css3-transition-small">ease-in-out</div><br></div>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.函数嵌套函数<br>2.函数内部可以引用外部的参数和变量<br>3.参数和变量不会被垃圾回收机制回收</p>
+<h3 id="创建函数的方法"><a href="#创建函数的方法" class="headerlink" title="创建函数的方法"></a>创建函数的方法</h3><p>在JavaScript中创建函数的方法有两种：函数声明和函数表达式，写法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一：函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二：函数表达式</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>还有一种自执行函数表达式，主要用于创建一个新的作用域，在此作用域内声明的变量不会和其它作用域内的变量冲突或混淆，大多是以匿名函数方式存在，且立即自动执行：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>此种自执行函数表达式归类于以上两种方法的第二种，也算是函数表达式。</p>
+<h3 id="闭包案例"><a href="#闭包案例" class="headerlink" title="闭包案例"></a>闭包案例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testVarible</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> num = <span class="number">666</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">debugger</span>;</span><br><span class="line">		num++;</span><br><span class="line">		<span class="keyword">return</span> num;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> testNum = testVarible();</span><br><span class="line">testNum(); <span class="comment">// 667</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createClosure</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'n = '</span> + n;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>; index &lt; <span class="number">10</span>; index++) &#123;</span><br><span class="line">	arr[index] = createClosure(index);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> arr) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(arr[index]());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上记代码闭包代码createClosure()方法会在每次循环中调用，每次循环的时候就会产生新的作用域，就会产生10个不同的作用域，最后的结果就是n=0,n=1,n=2,…,n=9</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createClosure</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>; index &lt; <span class="number">10</span>; index++) &#123;</span><br><span class="line">		arr[index] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">'n = '</span> + index;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">createClosure();</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> arr) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(arr[index]());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上记代码闭包代码createClosure()方法只调用一次，只有一个作用域，所以变量会是最后一次调用完后的值，最后的结果就是n=10,n=10,n=10,…,n=10</p>
 
-<p>再来个例子，把鼠标放到图片上看效果</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.css3-transition-div</span> &#123;</span><br><span class="line">	<span class="attribute">cursor</span>: pointer;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">220px</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#B1B6B9</span>;</span><br><span class="line">	<span class="attribute">box-shadow</span>: <span class="number">5px</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">#888888</span>;</span><br><span class="line">	<span class="attribute">transition</span>: transform:scale <span class="number">0.9s</span> ease-in;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(../images/autumn.png) no-repeat;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.css3-transition-div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">transform</span>: <span class="built_in">scale</span>(0.4, 0.4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code class="html"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"css3-transition-div"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-</code></pre>
-<div class="css3-transition-div"><br></div>
       
     </div>
 
@@ -449,7 +426,7 @@ t">
       
         <div class="post-tags">
           
-            <a href="/tags/css3/" rel="tag">#css3</a>
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
           
         </div>
       
@@ -458,17 +435,13 @@ t">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/15/css3-变换/" rel="next" title="css3 transform">
-                <i class="fa fa-chevron-left"></i> css3 transform
+              <a href="/2016/06/16/css3-动画/" rel="next" title="css3 animation">
+                <i class="fa fa-chevron-left"></i> css3 animation
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/16/css3-动画/" rel="prev" title="css3 animation">
-                css3 animation <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -517,8 +490,8 @@ t">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/15/css3-过渡/"
-           data-title="css3 transition" data-url="http://babymaychen.github.io/2016/06/15/css3-过渡/">
+      <div class="ds-thread" data-thread-key="2016/06/16/JavaScript-闭包/"
+           data-title="JavaScript 闭包" data-url="http://babymaychen.github.io/2016/06/16/JavaScript-闭包/">
       </div>
     
   </div>
@@ -629,7 +602,7 @@ t">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#transition-主要有四个参数"><span class="nav-number">1.</span> <span class="nav-text">transition 主要有四个参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transition-timing-function-参数介绍"><span class="nav-number">2.</span> <span class="nav-text">transition-timing-function 参数介绍</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建函数的方法"><span class="nav-number">2.</span> <span class="nav-text">创建函数的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包案例"><span class="nav-number">3.</span> <span class="nav-text">闭包案例</span></a></li></ol></div>
             
           </div>
         </section>
