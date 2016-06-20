@@ -96,25 +96,22 @@
 
 
 
-<meta name="description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
+<meta name="description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包是在某个作用域内定义的函数，它可以访问这个作用域内的所有变量。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
 
-特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机制回收
-创建函数的方法在JavaScript中创建函数的方法有两种">
+特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 闭包">
 <meta property="og:url" content="http://babymaychen.github.io/2016/06/16/JavaScript-闭包/index.html">
 <meta property="og:site_name" content="孙小妹的博客">
-<meta property="og:description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
+<meta property="og:description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包是在某个作用域内定义的函数，它可以访问这个作用域内的所有变量。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
 
-特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机制回收
-创建函数的方法在JavaScript中创建函数的方法有两种">
-<meta property="og:updated_time" content="2016-06-20T05:44:01.397Z">
+特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机">
+<meta property="og:updated_time" content="2016-06-20T05:54:27.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 闭包">
-<meta name="twitter:description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
+<meta name="twitter:description" content="闭包（closure）就是能够读取其他函数内部变量的函数。闭包是在某个作用域内定义的函数，它可以访问这个作用域内的所有变量。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。
 
-特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机制回收
-创建函数的方法在JavaScript中创建函数的方法有两种">
+特点1.函数嵌套函数2.函数内部可以引用外部的参数和变量3.参数和变量不会被垃圾回收机">
 
 
 
@@ -371,15 +368,17 @@
 
       
         <blockquote>
-<p>闭包（closure）就是能够读取其他函数内部变量的函数。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。</p>
+<p>闭包（closure）就是能够读取其他函数内部变量的函数。闭包是在某个作用域内定义的函数，它可以访问这个作用域内的所有变量。闭包主要有两个作用：一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。</p>
 </blockquote>
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.函数嵌套函数<br>2.函数内部可以引用外部的参数和变量<br>3.参数和变量不会被垃圾回收机制回收</p>
+<h3 id="闭包作用域链"><a href="#闭包作用域链" class="headerlink" title="闭包作用域链"></a>闭包作用域链</h3><p>1.函数本身作用域。<br>2.闭包定义时的作用域。<br>3.全局作用域。</p>
 <h3 id="创建函数的方法"><a href="#创建函数的方法" class="headerlink" title="创建函数的方法"></a>创建函数的方法</h3><p>在JavaScript中创建函数的方法有两种：函数声明和函数表达式，写法如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一：函数声明</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二：函数表达式</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
 <p>还有一种自执行函数表达式，主要用于创建一个新的作用域，在此作用域内声明的变量不会和其它作用域内的变量冲突或混淆，大多是以匿名函数方式存在，且立即自动执行：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 <p>此种自执行函数表达式归类于以上两种方法的第二种，也算是函数表达式。</p>
 <h3 id="闭包案例"><a href="#闭包案例" class="headerlink" title="闭包案例"></a>闭包案例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">testVarible</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> num = <span class="number">666</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">debugger</span>;</span><br><span class="line">		num++;</span><br><span class="line">		<span class="keyword">return</span> num;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> testNum = testVarible();</span><br><span class="line">testNum(); <span class="comment">// 667</span></span><br></pre></td></tr></table></figure>
+<p>上记代码说明变量num没有随着函数调用完后而消失。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createClosure</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'n = '</span> + n;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>; index &lt; <span class="number">10</span>; index++) &#123;</span><br><span class="line">	arr[index] = createClosure(index);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> arr) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(arr[index]());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上记代码闭包代码createClosure()方法会在每次循环中调用，每次循环的时候就会产生新的作用域，就会产生10个不同的作用域，最后的结果就是n=0,n=1,n=2,…,n=9</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createClosure</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> index = <span class="number">0</span>; index &lt; <span class="number">10</span>; index++) &#123;</span><br><span class="line">		arr[index] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">'n = '</span> + index;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">createClosure();</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> arr) &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(arr[index]());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -602,7 +601,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建函数的方法"><span class="nav-number">2.</span> <span class="nav-text">创建函数的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包案例"><span class="nav-number">3.</span> <span class="nav-text">闭包案例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#特点"><span class="nav-number">1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包作用域链"><span class="nav-number">2.</span> <span class="nav-text">闭包作用域链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建函数的方法"><span class="nav-number">3.</span> <span class="nav-text">创建函数的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包案例"><span class="nav-number">4.</span> <span class="nav-text">闭包案例</span></a></li></ol></div>
             
           </div>
         </section>
