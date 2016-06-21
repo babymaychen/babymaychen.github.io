@@ -96,25 +96,25 @@
 
 
 
-<meta name="description" content="this关键字在JavaScript中是一个动态变化的值，让初学者或者基础知识不扎实的人对它的理解不够，导致阅读别人代码或者自己写的时候出错，让我们开始学习它吧。
+<meta name="description" content="javascript 的这几种方法在我的编程中不经常出现，所以对之知之甚少，偶尔看见也是查一下，并没有深入了解，他们的区别也就更不知道了，所以在这里总结一下，也学习一下。
 
-全局对象在全局范围内(不在任何方法内)，这就指全局对象，这时this等同于window。
-123456/* this 等于 window */console.log(this === window); // truevar a =">
+call() &amp;amp; apply()每个函数都包含两个非继承而来的方法：apply()和call()，他们的用途都是在特定作用域中调用函数。
+fun.call(thisArg[, arg1[, arg2[, ...]]]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript this">
-<meta property="og:url" content="http://babymaychen.github.io/2016/06/20/javascript-this/index.html">
+<meta property="og:title" content="Javascript 方法call、apply、bind的使用详解及区别">
+<meta property="og:url" content="http://babymaychen.github.io/2016/06/20/javascript-方法call、apply等详解/index.html">
 <meta property="og:site_name" content="孙小妹的博客">
-<meta property="og:description" content="this关键字在JavaScript中是一个动态变化的值，让初学者或者基础知识不扎实的人对它的理解不够，导致阅读别人代码或者自己写的时候出错，让我们开始学习它吧。
+<meta property="og:description" content="javascript 的这几种方法在我的编程中不经常出现，所以对之知之甚少，偶尔看见也是查一下，并没有深入了解，他们的区别也就更不知道了，所以在这里总结一下，也学习一下。
 
-全局对象在全局范围内(不在任何方法内)，这就指全局对象，这时this等同于window。
-123456/* this 等于 window */console.log(this === window); // truevar a =">
-<meta property="og:updated_time" content="2016-06-20T08:42:21.696Z">
+call() &amp;amp; apply()每个函数都包含两个非继承而来的方法：apply()和call()，他们的用途都是在特定作用域中调用函数。
+fun.call(thisArg[, arg1[, arg2[, ...]]]">
+<meta property="og:updated_time" content="2016-06-21T02:53:36.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript this">
-<meta name="twitter:description" content="this关键字在JavaScript中是一个动态变化的值，让初学者或者基础知识不扎实的人对它的理解不够，导致阅读别人代码或者自己写的时候出错，让我们开始学习它吧。
+<meta name="twitter:title" content="Javascript 方法call、apply、bind的使用详解及区别">
+<meta name="twitter:description" content="javascript 的这几种方法在我的编程中不经常出现，所以对之知之甚少，偶尔看见也是查一下，并没有深入了解，他们的区别也就更不知道了，所以在这里总结一下，也学习一下。
 
-全局对象在全局范围内(不在任何方法内)，这就指全局对象，这时this等同于window。
-123456/* this 等于 window */console.log(this === window); // truevar a =">
+call() &amp;amp; apply()每个函数都包含两个非继承而来的方法：apply()和call()，他们的用途都是在特定作用域中调用函数。
+fun.call(thisArg[, arg1[, arg2[, ...]]]">
 
 
 
@@ -135,9 +135,9 @@
 
 
 
-  <link rel="canonical" href="http://babymaychen.github.io/2016/06/20/javascript-this/"/>
+  <link rel="canonical" href="http://babymaychen.github.io/2016/06/20/javascript-方法call、apply等详解/"/>
 
-  <title> Javascript this | 孙小妹的博客 </title>
+  <title> Javascript 方法call、apply、bind的使用详解及区别 | 孙小妹的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -290,7 +290,7 @@
             
             
               
-                Javascript this
+                Javascript 方法call、apply、bind的使用详解及区别
               
             
           </h1>
@@ -302,7 +302,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-20T15:34:37+08:00" content="2016-06-20">
+            <time itemprop="dateCreated" datetime="2016-06-20T17:02:15+08:00" content="2016-06-20">
               2016-06-20
             </time>
           </span>
@@ -332,8 +332,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/20/javascript-this/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/javascript-this/" itemprop="commentsCount"></span>
+                <a href="/2016/06/20/javascript-方法call、apply等详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/javascript-方法call、apply等详解/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -343,7 +343,7 @@
 
           
           
-             <span id="/2016/06/20/javascript-this/" class="leancloud_visitors" data-flag-title="Javascript this">
+             <span id="/2016/06/20/javascript-方法call、apply等详解/" class="leancloud_visitors" data-flag-title="Javascript 方法call、apply、bind的使用详解及区别">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -371,23 +371,23 @@
 
       
         <blockquote>
-<p>this关键字在JavaScript中是一个动态变化的值，让初学者或者基础知识不扎实的人对它的理解不够，导致阅读别人代码或者自己写的时候出错，让我们开始学习它吧。</p>
+<p>javascript 的这几种方法在我的编程中不经常出现，所以对之知之甚少，偶尔看见也是查一下，并没有深入了解，他们的区别也就更不知道了，所以在这里总结一下，也学习一下。</p>
 </blockquote>
-<h3 id="全局对象"><a href="#全局对象" class="headerlink" title="全局对象"></a>全局对象</h3><p>在全局范围内(不在任何方法内)，这就指全局对象，这时this等同于window。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* this 等于 window */</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">"aaa"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a); <span class="comment">// "aaa"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.a); <span class="comment">// "aaa"</span></span><br></pre></td></tr></table></figure>
-<h3 id="方法内部"><a href="#方法内部" class="headerlink" title="方法内部"></a>方法内部</h3><p>在一个方法内部，this的值取决于这个函数是怎么被调用的。</p>
-<p>demo1 – 普通调用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(f1() === <span class="built_in">window</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<p>没在严格模式下，this默认是一个全局对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(f1() === <span class="literal">undefined</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<p>在严格模式下，this等于给它设置的值，因为没有设置，所以就是undefined了。</p>
-<p>demo2 – 对象方法调用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">	age: <span class="number">27</span>,</span><br><span class="line">	getAge: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj.getAge()); <span class="comment">// 27</span></span><br></pre></td></tr></table></figure>
-<p>而当函数被作为某个对象的方法调用时，this等于那个对象。不过匿名函数的执行环境具有全局性，因此其 this 对象通常指向 window（通过 call()或apply()改变函数执行环境的情况下，this 就会指向其他对象）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">90</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">	age: <span class="number">27</span>,</span><br><span class="line">	getAge: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj.getAge()()); <span class="comment">// 90</span></span><br></pre></td></tr></table></figure>
-<p>每个函数在调用时，都会去获取2个值：arguments和this。匿名函数在获取这2个值时，只会搜索自己执行环境中的，永远不会直接访问外部函数或执行环境中的这2个变量。而this指向的是自己的调用者，匿名函数的调用者=window，所以this指向window。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">90</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">	age: <span class="number">27</span>,</span><br><span class="line">	getAge: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> _this.age;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj.getAge()()); <span class="comment">// 27</span></span><br></pre></td></tr></table></figure>
-<p>要想让getAge方法获取自己对象中的age属性，需要在调用闭包前给this赋值。</p>
+<h3 id="call-amp-apply"><a href="#call-amp-apply" class="headerlink" title="call() &amp; apply()"></a>call() &amp; apply()</h3><p>每个函数都包含两个非继承而来的方法：apply()和call()，他们的用途都是在特定作用域中调用函数。</p>
+<pre><code>fun.call(thisArg[, arg1[, arg2[, ...]]]) 
+</code></pre><p><code>call()</code>作用就是改变当前作用域，即改变this的指向，将函数对象从初始的上下文改变为由<code>thisArg</code>指定的新对象。<br><code>thisArg</code>：可选项，将被当做当前对象。如果没有thisArg，那么global对象将被用作thisArg。<br><code>arg1,arg2</code>：可选项，将被传递方法参数序列。</p>
+<h4 id="call-案例"><a href="#call-案例" class="headerlink" title="call() 案例"></a>call() 案例</h4><h5 id="demo1"><a href="#demo1" class="headerlink" title="demo1"></a>demo1</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"text"</span> id=<span class="string">"idTxt"</span> value=<span class="string">"input text"</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> value = <span class="string">"global var"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mFunc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="string">"member var"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">gFunc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.value);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">window</span>.gFunc();  <span class="comment">//=&gt;global var</span></span><br><span class="line">gFunc.call(<span class="built_in">window</span>);  <span class="comment">//=&gt;global var</span></span><br><span class="line">gFunc.call(<span class="built_in">document</span>.getElementById(<span class="string">'idTxt'</span>));  <span class="comment">//=&gt;input text</span></span><br></pre></td></tr></table></figure>
+<h5 id="demo2"><a href="#demo2" class="headerlink" title="demo2"></a>demo2</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func = <span class="keyword">new</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.a = <span class="string">"func"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> func2 = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="string">"func2"</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>.a); <span class="comment">// func</span></span><br><span class="line">	<span class="built_in">console</span>.log(x); <span class="comment">// lalala</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func2.call(func, <span class="string">"lalala"</span>);</span><br></pre></td></tr></table></figure>
+<p>首先解释下为啥func函数用了new这个关键字，用了new关键字就是一个构造函数，实际上就是创建了一个对象，这样就可以使this成为这个对象本身，而不是全局对象。</p>
+<h5 id="demo3"><a href="#demo3" class="headerlink" title="demo3"></a>demo3</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> animals = [</span><br><span class="line">  &#123; species: <span class="string">'Lion'</span>, name: <span class="string">'King'</span> &#125;,</span><br><span class="line">  &#123; species: <span class="string">'Whale'</span>, name: <span class="string">'Fail'</span> &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; animals.length; i++) &#123;</span><br><span class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'#'</span> + i + <span class="string">' '</span> + <span class="keyword">this</span>.species + <span class="string">': '</span> + <span class="keyword">this</span>.name);</span><br><span class="line">  &#125;).call(animals[i], i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>匿名函数的调用，把animals里的对象当做this指针，也很好理解。</p>
+<p>apply()方法与call()方法基本一样，只是第二个参数传入的是数组，这里就不举例子了</p>
+<pre><code>fun.apply(thisArg, [arg1,arg2,…argN])
+</code></pre><h3 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h3><p>bind()最简单的用法是创建一个函数，使这个函数不论怎么调用都有同样的this值。</p>
+<h5 id="bind-案例"><a href="#bind-案例" class="headerlink" title="bind()案例"></a>bind()案例</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = &#123;</span><br><span class="line">    x: <span class="number">81</span>,</span><br><span class="line">    getX: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">module</span>.getX()); <span class="comment">// 81</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getX = <span class="built_in">module</span>.getX;</span><br><span class="line"><span class="built_in">console</span>.log(getX()); <span class="comment">// 9，因为this是全局变量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个新方法，把this指向module</span></span><br><span class="line"><span class="keyword">var</span> boundGetX = getX.bind(<span class="built_in">module</span>);</span><br><span class="line"><span class="built_in">console</span>.log(boundGetX()); <span class="comment">// 81</span></span><br></pre></td></tr></table></figure>
+<h5 id="和setTimeout一起使用"><a href="#和setTimeout一起使用" class="headerlink" title="和setTimeout一起使用"></a>和setTimeout一起使用</h5><p>一般情况下setTimeout()的this指向window或global对象。当使用类的方法时需要this指向类实例，就可以使用bind()将this绑定到回调函数来管理实例。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Bloomer</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">  <span class="keyword">this</span>.petalCount = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random() * <span class="number">12</span>) + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1秒后调用declare函数</span></span><br><span class="line">Bloomer.prototype.bloom = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">  setTimeout(<span class="keyword">this</span>.declare.bind(<span class="keyword">this</span>), <span class="number">1000</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Bloomer.prototype.declare = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'我有 '</span> + <span class="keyword">this</span>.petalCount + <span class="string">' 朵花瓣!'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> blom = <span class="keyword">new</span> Bloomer();</span><br><span class="line">blom.bloom(); <span class="comment">// 我有 ** 朵花瓣！</span></span><br></pre></td></tr></table></figure>
+<p><strong> 注意：对于事件处理函数和setInterval方法也可以使用上面的方法 </strong></p>
 
       
     </div>
@@ -439,17 +439,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/16/JavaScript-闭包/" rel="next" title="JavaScript 闭包">
-                <i class="fa fa-chevron-left"></i> JavaScript 闭包
+              <a href="/2016/06/20/javascript-this/" rel="next" title="Javascript this">
+                <i class="fa fa-chevron-left"></i> Javascript this
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/20/javascript-方法call、apply等详解/" rel="prev" title="Javascript 方法call、apply、bind的使用详解及区别">
-                Javascript 方法call、apply、bind的使用详解及区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -498,8 +494,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/20/javascript-this/"
-           data-title="Javascript this" data-url="http://babymaychen.github.io/2016/06/20/javascript-this/">
+      <div class="ds-thread" data-thread-key="2016/06/20/javascript-方法call、apply等详解/"
+           data-title="Javascript 方法call、apply、bind的使用详解及区别" data-url="http://babymaychen.github.io/2016/06/20/javascript-方法call、apply等详解/">
       </div>
     
   </div>
@@ -610,7 +606,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局对象"><span class="nav-number">1.</span> <span class="nav-text">全局对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法内部"><span class="nav-number">2.</span> <span class="nav-text">方法内部</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#call-amp-apply"><span class="nav-number">1.</span> <span class="nav-text">call() & apply()</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#call-案例"><span class="nav-number">1.1.</span> <span class="nav-text">call() 案例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#demo1"><span class="nav-number">1.1.1.</span> <span class="nav-text">demo1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#demo2"><span class="nav-number">1.1.2.</span> <span class="nav-text">demo2</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#demo3"><span class="nav-number">1.1.3.</span> <span class="nav-text">demo3</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bind"><span class="nav-number">2.</span> <span class="nav-text">bind()</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#bind-案例"><span class="nav-number">2.0.1.</span> <span class="nav-text">bind()案例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#和setTimeout一起使用"><span class="nav-number">2.0.2.</span> <span class="nav-text">和setTimeout一起使用</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
