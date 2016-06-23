@@ -115,7 +115,7 @@ canvas 元素1&amp;lt;canvas id=&quot;tutorial&quot; width=&quot;150&quot; heigh
 <meta property="og:image" content="http://babymaychen.github.io/uploads/canvas-2.png">
 <meta property="og:image" content="http://babymaychen.github.io/uploads/canvas-3.png">
 <meta property="og:image" content="http://babymaychen.github.io/uploads/canvas-4.png">
-<meta property="og:updated_time" content="2016-06-22T07:30:43.430Z">
+<meta property="og:updated_time" content="2016-06-23T05:19:20.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5 canvas">
 <meta name="twitter:description" content="html5里新增了一些标签，为啥单独把canvas拿出来讲呢，因为它可以实现一些很酷的动画，让我们一起从零开始学习吧。
@@ -439,7 +439,7 @@ canvas 元素1&amp;lt;canvas id=&quot;tutorial&quot; width=&quot;150&quot; heigh
 <h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span>support<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</span><br><span class="line"><span class="keyword">if</span> (canvas.getContext) &#123;</span><br><span class="line">	<span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</span><br><span class="line">	ctx.shadowOffsetX = <span class="number">4</span>;</span><br><span class="line">	ctx.shadowOffsetY = <span class="number">4</span>;</span><br><span class="line">	ctx.shadowBlur = <span class="number">8</span>;</span><br><span class="line">	ctx.shadowColor = <span class="string">"rgba(0, 0, 0, 0.5)"</span>;</span><br><span class="line">	ctx.font = <span class="string">"48px serif"</span>;</span><br><span class="line">	ctx.fillText(<span class="string">"Hello world"</span>, <span class="number">10</span>, <span class="number">50</span>);</span><br><span class="line">	ctx.strokeText(<span class="string">"Hello world"</span>, <span class="number">10</span>, <span class="number">90</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/uploads/canvas-4.png" alt="canvas-4"></p>
-<h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><p>你需要进行以下一些步骤来画出一帧：<br>1.清空 canvas</p>
+<h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><p>你需要进行以下一些步骤来画出一帧：<br>1.清空 canvas<br>除非接下来要画的内容会完全充满 canvas （例如背景图），否则你需要清空所有。最简单的做法就是用 clearRect 方法。<br>2.保存 canvas 状态<br>如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。<br>3.绘制动画图形（animated shapes）<br>这一步才是重绘动画帧。<br>4.恢复 canvas 状态<br>如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。</p>
 
       
     </div>
