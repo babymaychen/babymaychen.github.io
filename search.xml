@@ -67,6 +67,111 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</span><br><span class="line"><span class="keyword">if</span> (canvas.getContext) &#123;</span><br><span class="line">	<span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</span><br><span class="line">	ctx.shadowOffsetX = <span class="number">4</span>;</span><br><span class="line">	ctx.shadowOffsetY = <span class="number">4</span>;</span><br><span class="line">	ctx.shadowBlur = <span class="number">8</span>;</span><br><span class="line">	ctx.shadowColor = <span class="string">"rgba(0, 0, 0, 0.5)"</span>;</span><br><span class="line">	ctx.font = <span class="string">"48px serif"</span>;</span><br><span class="line">	ctx.fillText(<span class="string">"Hello world"</span>, <span class="number">10</span>, <span class="number">50</span>);</span><br><span class="line">	ctx.strokeText(<span class="string">"Hello world"</span>, <span class="number">10</span>, <span class="number">90</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/uploads/canvas-4.png" alt="canvas-4"></p>
 <h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><p>你需要进行以下一些步骤来画出一帧：<br>1.清空 canvas<br>除非接下来要画的内容会完全充满 canvas （例如背景图），否则你需要清空所有。最简单的做法就是用 clearRect 方法。<br>2.保存 canvas 状态<br>如果你要改变一些会改变 canvas 状态的设置（样式，变形之类的），又要在每画一帧之时都是原始状态的话，你需要先保存一下。<br>3.绘制动画图形（animated shapes）<br>这一步才是重绘动画帧。<br>4.恢复 canvas 状态<br>如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。</p>
+<h5 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span>support<span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clock</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="keyword">var</span> ctx = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>).getContext(<span class="string">'2d'</span>);</span><br><span class="line">  ctx.save();</span><br><span class="line">  ctx.clearRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">150</span>,<span class="number">150</span>);</span><br><span class="line">  ctx.translate(<span class="number">75</span>,<span class="number">75</span>);</span><br><span class="line">  ctx.scale(<span class="number">0.4</span>,<span class="number">0.4</span>);</span><br><span class="line">  ctx.rotate(-<span class="built_in">Math</span>.PI/<span class="number">2</span>);</span><br><span class="line">  ctx.strokeStyle = <span class="string">"black"</span>;</span><br><span class="line">  ctx.fillStyle = <span class="string">"white"</span>;</span><br><span class="line">  ctx.lineWidth = <span class="number">8</span>;</span><br><span class="line">  ctx.lineCap = <span class="string">"round"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Hour marks</span></span><br><span class="line">  ctx.save();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">12</span>;i++)&#123;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.rotate(<span class="built_in">Math</span>.PI/<span class="number">6</span>);</span><br><span class="line">    ctx.moveTo(<span class="number">100</span>,<span class="number">0</span>);</span><br><span class="line">    ctx.lineTo(<span class="number">120</span>,<span class="number">0</span>);</span><br><span class="line">    ctx.stroke();</span><br><span class="line">  &#125;</span><br><span class="line">  ctx.restore();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Minute marks</span></span><br><span class="line">  ctx.save();</span><br><span class="line">  ctx.lineWidth = <span class="number">5</span>;</span><br><span class="line">  <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;<span class="number">60</span>;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span> (i%<span class="number">5</span>!=<span class="number">0</span>) &#123;</span><br><span class="line">      ctx.beginPath();</span><br><span class="line">      ctx.moveTo(<span class="number">117</span>,<span class="number">0</span>);</span><br><span class="line">      ctx.lineTo(<span class="number">120</span>,<span class="number">0</span>);</span><br><span class="line">      ctx.stroke();</span><br><span class="line">    &#125;</span><br><span class="line">    ctx.rotate(<span class="built_in">Math</span>.PI/<span class="number">30</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  ctx.restore();</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">var</span> sec = now.getSeconds();</span><br><span class="line">  <span class="keyword">var</span> min = now.getMinutes();</span><br><span class="line">  <span class="keyword">var</span> hr  = now.getHours();</span><br><span class="line">  hr = hr&gt;=<span class="number">12</span> ? hr<span class="number">-12</span> : hr;</span><br><span class="line"></span><br><span class="line">  ctx.fillStyle = <span class="string">"black"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// write Hours</span></span><br><span class="line">  ctx.save();</span><br><span class="line">  ctx.rotate( hr*(<span class="built_in">Math</span>.PI/<span class="number">6</span>) + (<span class="built_in">Math</span>.PI/<span class="number">360</span>)*min + (<span class="built_in">Math</span>.PI/<span class="number">21600</span>)*sec )</span><br><span class="line">  ctx.lineWidth = <span class="number">14</span>;</span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.moveTo(<span class="number">-20</span>,<span class="number">0</span>);</span><br><span class="line">  ctx.lineTo(<span class="number">80</span>,<span class="number">0</span>);</span><br><span class="line">  ctx.stroke();</span><br><span class="line">  ctx.restore();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// write Minutes</span></span><br><span class="line">  ctx.save();</span><br><span class="line">  ctx.rotate( (<span class="built_in">Math</span>.PI/<span class="number">30</span>)*min + (<span class="built_in">Math</span>.PI/<span class="number">1800</span>)*sec )</span><br><span class="line">  ctx.lineWidth = <span class="number">10</span>;</span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.moveTo(<span class="number">-28</span>,<span class="number">0</span>);</span><br><span class="line">  ctx.lineTo(<span class="number">112</span>,<span class="number">0</span>);</span><br><span class="line">  ctx.stroke();</span><br><span class="line">  ctx.restore();</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// Write seconds</span></span><br><span class="line">  ctx.save();</span><br><span class="line">  ctx.rotate(sec * <span class="built_in">Math</span>.PI/<span class="number">30</span>);</span><br><span class="line">  ctx.strokeStyle = <span class="string">"#D40000"</span>;</span><br><span class="line">  ctx.fillStyle = <span class="string">"#D40000"</span>;</span><br><span class="line">  ctx.lineWidth = <span class="number">6</span>;</span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.moveTo(<span class="number">-30</span>,<span class="number">0</span>);</span><br><span class="line">  ctx.lineTo(<span class="number">83</span>,<span class="number">0</span>);</span><br><span class="line">  ctx.stroke();</span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.arc(<span class="number">0</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</span><br><span class="line">  ctx.fill();</span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.arc(<span class="number">95</span>,<span class="number">0</span>,<span class="number">10</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</span><br><span class="line">  ctx.stroke();</span><br><span class="line">  ctx.fillStyle = <span class="string">"rgba(0,0,0,0)"</span>;</span><br><span class="line">  ctx.arc(<span class="number">0</span>,<span class="number">0</span>,<span class="number">3</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</span><br><span class="line">  ctx.fill();</span><br><span class="line">  ctx.restore();</span><br><span class="line"></span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.lineWidth = <span class="number">14</span>;</span><br><span class="line">  ctx.strokeStyle = <span class="string">'#325FA2'</span>;</span><br><span class="line">  ctx.arc(<span class="number">0</span>,<span class="number">0</span>,<span class="number">142</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</span><br><span class="line">  ctx.stroke();</span><br><span class="line"></span><br><span class="line">  ctx.restore();</span><br><span class="line"></span><br><span class="line">  <span class="built_in">window</span>.requestAnimationFrame(clock);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.requestAnimationFrame(clock);</span><br></pre></td></tr></table></figure>
+<p><canvas id="canvas" width="300" height="300">support</canvas></p>
+<script>
+function clock(){
+  var now = new Date();
+  var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.save();
+  ctx.clearRect(0,0,150,150);
+  ctx.translate(75,75);
+  ctx.scale(0.4,0.4);
+  ctx.rotate(-Math.PI/2);
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "white";
+  ctx.lineWidth = 8;
+  ctx.lineCap = "round";
+
+  // Hour marks
+  ctx.save();
+  for (var i=0;i<12;i++){
+    ctx.beginPath();
+    ctx.rotate(Math.PI/6);
+    ctx.moveTo(100,0);
+    ctx.lineTo(120,0);
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  // Minute marks
+  ctx.save();
+  ctx.lineWidth = 5;
+  for (i=0;i<60;i++){
+    if (i%5!=0) {
+      ctx.beginPath();
+      ctx.moveTo(117,0);
+      ctx.lineTo(120,0);
+      ctx.stroke();
+    }
+    ctx.rotate(Math.PI/30);
+  }
+  ctx.restore();
+
+  var sec = now.getSeconds();
+  var min = now.getMinutes();
+  var hr  = now.getHours();
+  hr = hr>=12 ? hr-12 : hr;
+
+  ctx.fillStyle = "black";
+
+  // write Hours
+  ctx.save();
+  ctx.rotate( hr*(Math.PI/6) + (Math.PI/360)*min + (Math.PI/21600)*sec )
+  ctx.lineWidth = 14;
+  ctx.beginPath();
+  ctx.moveTo(-20,0);
+  ctx.lineTo(80,0);
+  ctx.stroke();
+  ctx.restore();
+
+  // write Minutes
+  ctx.save();
+  ctx.rotate( (Math.PI/30)*min + (Math.PI/1800)*sec )
+  ctx.lineWidth = 10;
+  ctx.beginPath();
+  ctx.moveTo(-28,0);
+  ctx.lineTo(112,0);
+  ctx.stroke();
+  ctx.restore();
+
+  // Write seconds
+  ctx.save();
+  ctx.rotate(sec * Math.PI/30);
+  ctx.strokeStyle = "#D40000";
+  ctx.fillStyle = "#D40000";
+  ctx.lineWidth = 6;
+  ctx.beginPath();
+  ctx.moveTo(-30,0);
+  ctx.lineTo(83,0);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0,0,10,0,Math.PI*2,true);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(95,0,10,0,Math.PI*2,true);
+  ctx.stroke();
+  ctx.fillStyle = "rgba(0,0,0,0)";
+  ctx.arc(0,0,3,0,Math.PI*2,true);
+  ctx.fill();
+  ctx.restore();
+
+  ctx.beginPath();
+  ctx.lineWidth = 14;
+  ctx.strokeStyle = '#325FA2';
+  ctx.arc(0,0,142,0,Math.PI*2,true);
+  ctx.stroke();
+
+  ctx.restore();
+
+  window.requestAnimationFrame(clock);
+}
+
+window.requestAnimationFrame(clock);
+</script>
+
+
 ]]></content>
     </entry>
     
