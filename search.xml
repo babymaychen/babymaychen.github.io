@@ -4,6 +4,18 @@
   
     
     <entry>
+      <title><![CDATA[vueJs + sass 制作钟表]]></title>
+      <url>http://babymaychen.github.io/2016/06/27/vueJs/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>通过小超人(原同事)的介绍，知道了vueJs，他说它很酷，所以我最近也看看它有多酷，看了下<a href="http://cn.vuejs.org/" target="_blank" rel="external">官方文档</a>，发现它很好上手，是用数据来渲染视图，改变了原来我们需要操作DOM的一些繁杂的操作，而且组件化低耦合可复用，无依赖很轻巧，sass是我在<a href="http://codepen.io/" target="_blank" rel="external">codepen</a>上面看见许多的优秀作品都是用这个语法写的css，所以研究了下，两者结合写了个小例子。</p>
+</blockquote>
+<h4 id="钟表"><a href="#钟表" class="headerlink" title="钟表"></a>钟表</h4><p>点击Edit On CodePen查看详细源码及效果</p>
+<p></p><p data-height="479" data-theme-id="0" data-slug-hash="BzWQJz" data-default-tab="css,result" data-user="suntianshu" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/suntianshu/pen/BzWQJz/" target="_blank" rel="external">vuejs + sass Clock</a> by 孙小美 (<a href="http://codepen.io/suntianshu" target="_blank" rel="external">@suntianshu</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[炫酷的before和after]]></title>
       <url>http://babymaychen.github.io/2016/06/23/css-%E7%82%AB%E9%85%B7%E7%9A%84before%E5%92%8Cafter/</url>
       <content type="html"><![CDATA[<blockquote>
