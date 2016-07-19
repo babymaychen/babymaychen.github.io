@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/07/19/javascript-%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC%E7%9A%84%E5%9D%91/</loc>
+    <lastmod>2016-07-19T06:25:04.054Z</lastmod>
+    <data>
+        <display>
+        <title>javascript 数组和对象赋值的坑</title>
+        <pubTime>2016-07-19T06:25:04.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/27/vueJs/</loc>
+    <lastmod>2016-06-28T05:12:51.151Z</lastmod>
+    <data>
+        <display>
+        <title>vueJs + sass 制作钟表</title>
+        <pubTime>2016-06-27T01:17:24.000Z</pubTime>
+        
+        <tag>vueJs</tag>
+         
+        <tag>sass</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/23/css-%E7%82%AB%E9%85%B7%E7%9A%84before%E5%92%8Cafter/</loc>
+    <lastmod>2016-06-23T07:41:18.622Z</lastmod>
+    <data>
+        <display>
+        <title>炫酷的before和after</title>
+        <pubTime>2016-06-23T06:09:21.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/22/html5-canvas/</loc>
+    <lastmod>2016-06-23T05:27:45.084Z</lastmod>
+    <data>
+        <display>
+        <title>html5 canvas</title>
+        <pubTime>2016-06-22T02:47:49.000Z</pubTime>
+        
+        <tag>Html5</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/20/javascript-%E6%96%B9%E6%B3%95call%E3%80%81apply%E7%AD%89%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2016-06-21T02:53:36.735Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript 方法call、apply、bind的使用详解及区别</title>
+        <pubTime>2016-06-20T09:02:15.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/20/javascript-this/</loc>
+    <lastmod>2016-06-20T08:42:21.696Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript this</title>
+        <pubTime>2016-06-20T07:34:37.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/16/JavaScript-%E9%97%AD%E5%8C%85/</loc>
+    <lastmod>2016-06-20T05:54:27.392Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript 闭包</title>
+        <pubTime>2016-06-16T08:56:56.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/16/css3-%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2016-06-16T08:12:48.008Z</lastmod>
+    <data>
+        <display>
+        <title>css3 animation</title>
+        <pubTime>2016-06-16T03:30:38.000Z</pubTime>
+        
+        <tag>css3</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/14/css/</loc>
+    <lastmod>2016-06-16T02:53:02.512Z</lastmod>
+    <data>
+        <display>
+        <title>CSS 理解优先级、布局和定位</title>
+        <pubTime>2016-06-14T01:11:54.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/15/css3-%E5%8F%98%E6%8D%A2/</loc>
+    <lastmod>2016-06-16T02:40:39.708Z</lastmod>
+    <data>
+        <display>
+        <title>css3 transform</title>
+        <pubTime>2016-06-15T04:46:09.000Z</pubTime>
+        
+        <tag>css3</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/15/css-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2016-06-16T02:38:12.927Z</lastmod>
+    <data>
+        <display>
+        <title>CSS 使用技巧</title>
+        <pubTime>2016-06-15T00:44:23.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/15/css3-%E8%BF%87%E6%B8%A1/</loc>
+    <lastmod>2016-06-16T02:27:45.663Z</lastmod>
+    <data>
+        <display>
+        <title>css3 transition</title>
+        <pubTime>2016-06-15T06:55:08.000Z</pubTime>
+        
+        <tag>css3</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://babymaychen.github.io/2016/06/13/javascript/</loc>
+    <lastmod>2016-06-13T09:11:38.363Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript 基础</title>
+        <pubTime>2016-06-13T05:23:24.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术文档" url="http://babymaychen.github.io/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>

@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[javascript 数组和对象赋值的坑]]></title>
+      <url>http://babymaychen.github.io/2016/07/19/javascript-%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC%E7%9A%84%E5%9D%91/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[vueJs + sass 制作钟表]]></title>
       <url>http://babymaychen.github.io/2016/06/27/vueJs/</url>
       <content type="html"><![CDATA[<blockquote>
