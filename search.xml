@@ -4,6 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[如何让你的博客(hexo搭建)被Google到]]></title>
+      <url>http://babymaychen.github.io/2016/07/20/%E5%A6%82%E4%BD%95%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A2%ABGoogle%E5%88%B0/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>今天好高兴啊，打开Google搜索了下“孙小妹的博客”，第一个就是我的博客，兴奋的不行，但是对比了下百度的就不行了，不管怎么说，我的博客也可以被大家看到了，这个文章当然要写，记录下来，方便以后大家推广自己的博客。</p>
+</blockquote>
+<h4 id="首先就是注册一个Google账号"><a href="#首先就是注册一个Google账号" class="headerlink" title="首先就是注册一个Google账号"></a>首先就是注册一个Google账号</h4><p><a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="external">Google搜索引擎提交入口</a><br>在这里就要感谢小超人了，虽然我也买了vpn，但是注册了n遍，都不给我发短信，这就是为啥我如此兴奋的原因吧，这个在国内可能就是一个坎，他买的国外的服务器，让他帮我注册的，所以这个鸿沟如果跨越了，就没什么难事了。</p>
+<h4 id="下载验证文件"><a href="#下载验证文件" class="headerlink" title="下载验证文件"></a>下载验证文件</h4><p><img src="/uploads/downloadCheck.png" alt="downloadCheck"><br>然后把下载后的html放到source目录下，然后部署到服务器上，然后打开浏览器输入：<a href="http://你的网站域名/你下载的验证文件名字.html" target="_blank" rel="external">http://你的网站域名/你下载的验证文件名字.html</a> ，如果你看到了一串字符(注：只有一串字符)，那就成功了，但是我遇到的情况是，不仅仅有字符，还有hexo搭建的外框装饰，这个时候我就查看了下public下的文件，发现那个验证Google的html文件里面多了很多html代码，我就手动的把它改成了原来的，或者可以不编译(即：不用hexo g命令)，直接部署，然后再刷新看看，就好了，验证也成功了。</p>
+<h4 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h4><p><code>npm install hexo-generator-sitemap --save</code><br>在博客目录的_config.yml中添加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">	path: sitemap.xml</span><br></pre></td></tr></table></figure></p>
+<p>这里的缩进很重要(不解释，试一下就知道了)</p>
+<p>然后编译你的博客(hexo g)，public下面发现生成了sitemap.xml，就成功了</p>
+<h4 id="让谷歌收录我们的博客"><a href="#让谷歌收录我们的博客" class="headerlink" title="让谷歌收录我们的博客"></a>让谷歌收录我们的博客</h4><p>向<a href="https://www.google.com/webmasters/tools" target="_blank" rel="external">Google站长工具</a>提交sitemap</p>
+<p>添加了站点验证通过后，选择站点，之后在抓取——站点地图中就能看到添加/测试站点地图</p>
+<p><img src="/uploads/sitemap.png" alt="sitemap"></p>
+<p>第二天早上一来打开Google一搜就搜到我的博客了。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[javascript 数组和对象赋值的坑]]></title>
       <url>http://babymaychen.github.io/2016/07/19/javascript-%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC%E7%9A%84%E5%9D%91/</url>
       <content type="html"><![CDATA[<blockquote>
